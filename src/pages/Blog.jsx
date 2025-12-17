@@ -38,8 +38,8 @@ function Blog() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-paper-base text-ink-black flex justify-center py-24 px-4">
-            <div className="max-w-3xl w-full">
+        <div className="min-h-screen bg-paper-base text-ink-black py-24">
+            <div className="w-[60%] mx-auto px-8">
                 <div className="space-y-12">
                     {posts.map((post) => (
                         <div key={post.slug} className="group">
