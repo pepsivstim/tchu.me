@@ -64,6 +64,8 @@ function Photos() {
                         src={photo.url}
                         alt={photo.caption || photo.name}
                         className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out block"
+                        loading="lazy"
+                        decoding="async"
                     />
                     {photo.caption && (
                         <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
