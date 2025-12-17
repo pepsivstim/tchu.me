@@ -51,28 +51,42 @@ function Photos() {
         loadPhotos();
     }, []);
 
+    // Component to handle individual image loading
+    const ImageWithLoader = ({ photo, onClick }) => {
+        const [isLoading, setIsLoading] = useState(true);
+
+        return (
+            <div
+                onClick={() => onClick(photo)}
+                className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            >
+                {isLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-8 h-8 border-2 border-ink-light/30 border-t-ink-black rounded-full animate-spin"></div>
+                    </div>
+                )}
+                <img
+                    src={photo.url}
+                    alt={photo.caption || photo.name}
+                    className={`w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out block ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+                    loading="lazy"
+                    decoding="async"
+                    onLoad={() => setIsLoading(false)}
+                />
+                {photo.caption && !isLoading && (
+                    <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-xs md:text-sm font-serif text-ink-black italic">{photo.caption}</p>
+                    </div>
+                )}
+            </div>
+        );
+    };
+
     // Helper to render a grid of photos
     const PhotoGrid = ({ photos }) => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {photos.map((photo) => (
-                <div
-                    key={photo.name}
-                    onClick={() => setSelectedPhoto(photo)}
-                    className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 cursor-zoom-in"
-                >
-                    <img
-                        src={photo.url}
-                        alt={photo.caption || photo.name}
-                        className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out block"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                    {photo.caption && (
-                        <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                            <p className="text-xs md:text-sm font-serif text-ink-black italic">{photo.caption}</p>
-                        </div>
-                    )}
-                </div>
+                <ImageWithLoader key={photo.name} photo={photo} onClick={setSelectedPhoto} />
             ))}
         </div>
     );
