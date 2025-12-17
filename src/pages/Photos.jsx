@@ -93,7 +93,7 @@ function Photos() {
 
     return (
         <div className="min-h-screen bg-paper-base text-ink-black py-24">
-            <div className="w-[60%] mx-auto px-8">
+            <div className="w-[90%] md:w-[60%] mx-auto px-4 md:px-8">
                 {Object.keys(sections).length === 0 ? (
                     <div className="text-center text-ink-light italic">
                         No photos found. Add images to <code>src/content/photos</code>.

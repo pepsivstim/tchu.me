@@ -51,7 +51,7 @@ function BlogPost() {
 
     return (
         <div className="min-h-screen bg-paper-base text-ink-black py-24">
-            <article className="w-[60%] mx-auto px-8 prose prose-stone lg:prose-lg font-serif">
+            <article className="w-[90%] md:w-[60%] mx-auto px-4 md:px-8 prose prose-stone lg:prose-lg font-serif">
                 <Link to="/blog" className="no-underline text-ink-light hover:text-ink-black mb-8 block transition-colors">
                     ← Back to all posts
                 </Link>
