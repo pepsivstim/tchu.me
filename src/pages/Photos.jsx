@@ -1,5 +1,84 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import manifest from '../content/photos/manifest.json';
+import sectionsOrder from '../content/photos/sections.json';
+
+// Component to handle individual image loading
+const ImageWithLoader = ({ photo, onClick }) => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [isReady, setIsReady] = useState(false);
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        // Check immediately
+        const checkComplete = () => {
+            if (imgRef.current && imgRef.current.complete) {
+                setIsLoading(false);
+                setTimeout(() => setIsReady(true), 1000);
+                return true;
+            }
+            return false;
+        };
+
+        if (checkComplete()) return;
+
+        // Poll for completion to handle edge cases with lazy loading/cache
+        const intervalId = setInterval(() => {
+            if (checkComplete()) {
+                clearInterval(intervalId);
+            }
+        }, 200);
+
+        // Stop polling after 10 seconds to avoid infinite loops on broken images
+        setTimeout(() => clearInterval(intervalId), 10000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
+    return (
+        <div
+            onClick={() => onClick(photo)}
+            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 ease-in-out transform-gpu scale-100 hover:scale-[1.02] cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+        >
+            {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-8 h-8 border-2 border-ink-light/30 border-t-ink-black rounded-full animate-spin"></div>
+                </div>
+            )}
+            <img
+                ref={imgRef}
+                src={photo.url}
+                alt={photo.caption || photo.name}
+                className={`w-full h-full object-cover grayscale hover:grayscale-0 block 
+                    ${isLoading ? 'opacity-0' : 'opacity-100'} 
+                    ${isReady
+                        ? 'transition-[filter] duration-[6000ms] ease-in-out hover:duration-300'
+                        : 'transition-opacity duration-500 ease-in-out'}`}
+                loading="lazy"
+                decoding="async"
+                onLoad={() => {
+                    setIsLoading(false);
+                    // Enable the slow hover transition only after initial load animation completes
+                    setTimeout(() => setIsReady(true), 1000);
+                }}
+                onError={() => setIsLoading(false)}
+            />
+            {photo.caption && !isLoading && (
+                <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-xs md:text-sm font-sans font-medium text-ink-black tracking-wide">{photo.caption}</p>
+                </div>
+            )}
+        </div>
+    );
+};
+
+// Helper to render a grid of photos
+const PhotoGrid = ({ photos, onPhotoClick }) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+        {photos.map((photo) => (
+            <ImageWithLoader key={photo.name} photo={photo} onClick={onPhotoClick} />
+        ))}
+    </div>
+);
 
 function Photos() {
     // Structure: { "Uncategorized": [photos], "Travel": [photos], ... }
@@ -51,74 +130,56 @@ function Photos() {
         loadPhotos();
     }, []);
 
-    // Component to handle individual image loading
-    const ImageWithLoader = ({ photo, onClick }) => {
-        const [isLoading, setIsLoading] = useState(true);
-
-        return (
-            <div
-                onClick={() => onClick(photo)}
-                className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
-            >
-                {isLoading && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-8 h-8 border-2 border-ink-light/30 border-t-ink-black rounded-full animate-spin"></div>
-                    </div>
-                )}
-                <img
-                    src={photo.url}
-                    alt={photo.caption || photo.name}
-                    className={`w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out block ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-                    loading="lazy"
-                    decoding="async"
-                    onLoad={() => setIsLoading(false)}
-                />
-                {photo.caption && !isLoading && (
-                    <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <p className="text-xs md:text-sm font-serif text-ink-black italic">{photo.caption}</p>
-                    </div>
-                )}
-            </div>
-        );
-    };
-
-    // Helper to render a grid of photos
-    const PhotoGrid = ({ photos }) => (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-            {photos.map((photo) => (
-                <ImageWithLoader key={photo.name} photo={photo} onClick={setSelectedPhoto} />
-            ))}
-        </div>
-    );
-
     return (
         <div className="min-h-screen bg-paper-base text-ink-black py-24">
             <div className="w-[90%] md:w-[60%] mx-auto px-4 md:px-8">
-                {Object.keys(sections).length === 0 ? (
-                    <div className="text-center text-ink-light italic">
-                        No photos found. Add images to <code>src/content/photos</code>.
-                    </div>
-                ) : (
+                {Object.keys(sections).length !== 0 && (
                     <div className="space-y-16">
                         {/* Render General first if exists */}
                         {sections['General'] && (
                             <div>
-                                <PhotoGrid photos={sections['General']} />
+                                <PhotoGrid photos={sections['General']} onPhotoClick={setSelectedPhoto} />
                             </div>
                         )}
 
-                        {/* Render other sections sorted alphabetically */}
+                        {/* Render other sections sorted by custom order, then alphabetically */}
                         {Object.keys(sections)
                             .filter(key => key !== 'General')
-                            .sort()
-                            .map(section => (
-                                <div key={section}>
-                                    <h2 className="text-2xl font-serif font-bold mb-6 text-ink-black border-b border-paper-border pb-2 inline-block">
-                                        {section}
-                                    </h2>
-                                    <PhotoGrid photos={sections[section]} />
-                                </div>
-                            ))
+                            .sort((a, b) => {
+                                const indexA = sectionsOrder.findIndex(s => s.id === a);
+                                const indexB = sectionsOrder.findIndex(s => s.id === b);
+
+                                // If both are in the list, sort by index
+                                if (indexA !== -1 && indexB !== -1) {
+                                    return indexA - indexB;
+                                }
+
+                                // If only A is in the list, it comes first
+                                if (indexA !== -1) return -1;
+                                // If only B is in the list, it comes first
+                                if (indexB !== -1) return 1;
+
+                                // If neither is in the list, sort alphabetically
+                                return a.localeCompare(b);
+                            })
+                            .map(section => {
+                                const sectionMeta = sectionsOrder.find(s => s.id === section);
+                                return (
+                                    <div key={section}>
+                                        <h2 className="text-2xl font-serif font-bold mb-2 text-ink-black border-b border-paper-border pb-2 inline-block">
+                                            {section}
+                                        </h2>
+                                        {sectionMeta?.description && (
+                                            <p className="text-ink-light font-sans text-sm md:text-base mb-6 w-full leading-relaxed">
+                                                {sectionMeta.description}
+                                            </p>
+                                        )}
+                                        <div className={sectionMeta?.description ? "" : "mt-6"}>
+                                            <PhotoGrid photos={sections[section]} onPhotoClick={setSelectedPhoto} />
+                                        </div>
+                                    </div>
+                                );
+                            })
                         }
                     </div>
                 )}
@@ -140,7 +201,7 @@ function Photos() {
                             className="max-h-[85vh] w-auto object-contain shadow-2xl rounded-sm cursor-default"
                         />
                         {selectedPhoto.caption && (
-                            <p className="mt-4 text-ink-black font-serif italic text-lg bg-paper-base/80 px-4 py-2 rounded-sm cursor-text">
+                            <p className="mt-4 text-ink-black font-sans font-medium text-lg bg-paper-base/60 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/40 shadow-sm cursor-text tracking-wide">
                                 {selectedPhoto.caption}
                             </p>
                         )}
