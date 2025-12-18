@@ -5,7 +5,6 @@ date: "2025-12-18"
 excerpt: "a tale of 3 friends and finishing the job"
 
 ---
-
 In April 2024 I went to Iceland with two close friends. It's one of my most treasured trips and another lesson that sharing experiences makes them meaningful.
 
 ## the journey
@@ -114,13 +113,13 @@ As Max and I made it to the bottom of the trail Brandon called out and frantical
 
 Our drive back was no less than treacherous.
 
-As we made our way back, we came across a patch of snow on the road that passed through on the way there. The patch had two deep tire tracks where all the tires passed through and a very raised middle section the tires didn't. With the bottom damage to our Yaris I was concerned, but we had passed through the same earlier. Pushing through after getting slightly stuck. The additional damage sustained to the underbody there couldn't have been good. 
+As we made our way back, we came back across a patch of frozen snow on the road that we passed through on the way there. The patch had two deep tire tracks where all the tires passed through and a very raised middle section the tires didn't. With the bottom damage to our Yaris I was concerned, but we had passed through the same earlier, so we pushed through after getting slightly stuck.
 
-As the people who got out to guide the driver get back in, we noticed the dangling sheet of metal sitting in the raised patch of ice. It had been torn clean off, its mangled form resting comically on the ice. Another intensely absurdly comical moment in a rollercoaster of a day. 
+As the people who got out to guide the driver got back in, we noticed the dangling sheet of metal sitting in the raised patch. It had been torn clean off, its mangled form resting comically on the ice. Another intensely absurdly comical moment in a rollercoaster of a day. 
 
 ![I'm dead](/images/yaris-piece.jpg#large)
 
-On the way back we found the rock that caused the damage to our car and in a moment of glorious vindication tossed it into the ocean. Job felt finished. It wasn't.
+On the way back we found the rock that caused the damage to the Yaris and in a moment of glorious vindication tossed it into the ocean. Job felt finished. It wasn't.
 
 Max had to take a work call so that delayed us even more. But we stopped at the statue we passed earlier during the sunset and my goodness that was one of the most gorgeous sunsets I've ever seen. Night fell but there remained a dim glow in the horizon because of Iceland's rapidly lengthening days. 
 

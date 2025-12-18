@@ -1,17 +1,64 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import matter from 'gray-matter';
+import { Buffer } from 'buffer';
+import { slugify } from '../utils/slugify';
+
+window.Buffer = window.Buffer || Buffer;
 
 function Home() {
+  const [latestPost, setLatestPost] = useState(null);
+
+  useEffect(() => {
+    const loadLatestPost = async () => {
+      try {
+        const modules = import.meta.glob('../content/posts/*.md', { query: '?raw', import: 'default' });
+
+        const loadedPosts = await Promise.all(
+          Object.entries(modules).map(async ([path, loader]) => {
+            try {
+              const rawContent = await loader();
+              const { data } = matter(rawContent);
+              return { ...data, slug: slugify(data.title) };
+            } catch (e) {
+              return null;
+            }
+          })
+        );
+
+        const sorted = loadedPosts
+          .filter(Boolean)
+          .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        if (sorted.length > 0) {
+          setLatestPost(sorted[0]);
+        }
+      } catch (error) {
+        console.error('Failed to load posts', error);
+      }
+    };
+
+    loadLatestPost();
+  }, []);
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-paper-base text-ink-black">
 
       {/* Content Container - Minimalist Typography */}
       <div className="text-center max-w-3xl w-full z-10">
-        <h1 className="text-6xl md:text-8xl font-serif font-bold mb-6 tracking-tighter text-ink-black">
-          tchu.blog
-        </h1>
-        <p className="text-xl md:text-2xl text-ink-light mb-12 font-light italic leading-relaxed">
-          Proudly vibecoded
-        </p>
+        {latestPost ? (
+          <Link to={`/blog/${latestPost.slug}`} className="block mb-12 group">
+            <h2 className="text-xl md:text-2xl text-ink-black font-serif italic mb-2 group-hover:text-ink-light transition-colors">
+              Latest: {latestPost.title}
+            </h2>
+            <p className="text-lg text-ink-light font-light leading-relaxed">
+              {latestPost.excerpt}
+            </p>
+          </Link>
+        ) : (
+          <p className="text-xl md:text-2xl text-ink-light mb-12 font-light italic leading-relaxed">
+            Proudly vibecoded
+          </p>
+        )}
         <div className="flex justify-center gap-8">
           <Link to="/blog" className="bg-ink-black text-paper-base px-10 py-3 rounded-md hover:bg-ink-light transition-all duration-300 shadow-sm font-medium text-lg cursor-pointer">
             Read Blog
