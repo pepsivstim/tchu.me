@@ -16,9 +16,9 @@ function Home() {
           <Link to="/blog" className="bg-ink-black text-paper-base px-10 py-3 rounded-md hover:bg-ink-light transition-all duration-300 shadow-sm font-medium text-lg cursor-pointer">
             Read Blog
           </Link>
-          <button className="bg-transparent border border-ink-black text-ink-black px-10 py-3 rounded-md hover:bg-ink-black hover:text-paper-base transition-all duration-300 shadow-sm font-medium text-lg cursor-pointer">
-            Experience
-          </button>
+          <Link to="/photos" className="bg-transparent border border-ink-black text-ink-black px-10 py-3 rounded-md hover:bg-ink-black hover:text-paper-base transition-all duration-300 shadow-sm font-medium text-lg cursor-pointer">
+            Photos
+          </Link>
         </div>
       </div>
     </div>
