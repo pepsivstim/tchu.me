@@ -17,25 +17,38 @@ function Blog() {
 
             const loadedPosts = await Promise.all(
                 Object.entries(modules).map(async ([path, loader]) => {
-                    const rawContent = await loader();
-                    const { data, content } = matter(rawContent);
-                    // generate slug from title
-                    const slug = slugify(data.title);
+                    try {
+                        const rawContent = await loader();
+                        const { data, content } = matter(rawContent);
 
-                    // Simple word count estimate
-                    const wordCount = content.split(/\s+/).filter(Boolean).length;
+                        // Check for valid data
+                        if (!data || !data.title || !data.date) {
+                            console.warn(`Skipping invalid post: ${path}`);
+                            return null;
+                        }
 
-                    return {
-                        slug,
-                        wordCount,
-                        ...data
-                    };
+                        // generate slug from title
+                        const slug = slugify(data.title);
+
+                        // Simple word count estimate
+                        const wordCount = content ? content.split(/\s+/).filter(Boolean).length : 0;
+
+                        return {
+                            slug,
+                            wordCount,
+                            ...data
+                        };
+                    } catch (error) {
+                        console.error(`Error loading post: ${path}`, error);
+                        return null;
+                    }
                 })
             );
 
-            // Sort by date descending
-            loadedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
-            setPosts(loadedPosts);
+            // Filter out failures and sort by date descending
+            const validPosts = loadedPosts.filter(post => post !== null);
+            validPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            setPosts(validPosts);
         };
 
         loadPosts();
@@ -43,7 +56,7 @@ function Blog() {
 
     return (
         <div className="min-h-screen bg-paper-base text-ink-black py-24">
-            <div className="w-[90%] md:w-[60%] mx-auto px-4 md:px-8">
+            <div className="w-[95%] md:w-[60%] mx-auto px-4 md:px-8">
                 <div className="space-y-12">
                     {posts.map((post) => (
                         <div key={post.slug} className="group">
