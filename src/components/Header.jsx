@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     const location = useLocation();
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -10,15 +12,45 @@ function Header() {
 
     const isActive = (path) => location.pathname === path || location.pathname.startsWith(`${path}/`);
 
+    useEffect(() => {
+        const controlNavbar = () => {
+            if (typeof window !== 'undefined') {
+                // Always show if at top or if menu is open
+                if (window.scrollY === 0 || isMenuOpen) {
+                    setIsVisible(true);
+                    setLastScrollY(window.scrollY);
+                    return;
+                }
+
+                if (window.scrollY > lastScrollY) { // if scroll down
+                    setIsVisible(false);
+                } else { // if scroll up
+                    setIsVisible(true);
+                }
+
+                // Remember current page location to use in the next move
+                setLastScrollY(window.scrollY);
+            }
+        };
+
+        window.addEventListener('scroll', controlNavbar);
+
+        // cleanup function
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+    }, [lastScrollY, isMenuOpen]);
+
+
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-paper-base transition-all duration-300">
-            <div className="w-full max-w-4xl mx-auto px-4 md:px-8 py-3 md:py-6 flex justify-between items-center relative border-b border-paper-border">
-                <Link to="/" className="text-xl md:text-2xl font-serif font-bold text-ink-black tracking-tight cursor-pointer z-50" onClick={closeMenu}>
+        <nav className={`fixed top-0 left-0 w-full z-50 bg-paper-base transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+            <div className="w-full max-w-4xl mx-auto px-4 lg:px-8 py-3 lg:py-6 flex justify-between items-center relative border-b border-paper-border">
+                <Link to="/" className="text-xl lg:text-2xl font-serif font-bold text-ink-black tracking-tight cursor-pointer z-50" onClick={closeMenu}>
                     tchu.me
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex gap-8">
+                <div className="hidden lg:flex gap-8">
                     <Link to="/blog" className={`${isActive('/blog') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} font-medium transition duration-300 relative group`}>
                         Blog
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-ink-black transition-all duration-300 ${isActive('/blog') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -31,7 +63,7 @@ function Header() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden z-50 text-ink-black focus:outline-none"
+                    className="lg:hidden z-50 text-ink-black focus:outline-none"
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
@@ -47,7 +79,7 @@ function Header() {
                 </button>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`fixed inset-0 bg-paper-base flex flex-col items-center justify-center gap-10 transition-transform duration-300 ease-in-out md:hidden z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`fixed inset-0 bg-paper-base flex flex-col items-center justify-center gap-10 transition-transform duration-300 ease-in-out lg:hidden z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
                     <Link to="/blog" onClick={closeMenu} className="text-2xl text-ink-black font-serif font-bold hover:text-ink-light transition-colors">
                         Blog
