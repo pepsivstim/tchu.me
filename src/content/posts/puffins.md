@@ -1,38 +1,40 @@
 ---
-title: "westfjords, puffins, a broken car"
+title: "westfjords, puffins, and a broken car"
 date: "2025-12-18"
-excerpt: "a tale of 3 friends and finishing the job"
+excerpt: "a tale of 3 friends finishing the job"
 ---
-In April 2024 I went to Iceland with two close friends.
+In April 2024 I went to Iceland with two close friends. It was our 2nd to last full day circling Iceland's iconic Ring Road. We had a decision to make.
 
 ## the gamble
 
-One of the places I wanted visit was the Látrabjarg cliffs at the far end of the Westfjords — one of the most remote regions of an already remote and largely rural country. The cliffs are known for puffin spotting.
+One of the places we wanted visit was the Látrabjarg cliffs at the far end of the Westfjords — one of the most remote regions of an already remote and largely rural country. The cliffs are known for their puffins.
 
 ![The Westfjords is that jagged triangle like peninsula in the Northwestern corner of Iceland. In red was our destination.](/images/westfjords.png#large)
 
-We were unsurprisingly deciding in the morning *day of* whether we'd make the drive there, but there were multiple factors to consider. 
+We were unsurprisingly deciding the morning *day of* whether we'd make the drive there. There were multiple factors to consider. 
 
-For one, it was about a 5 hour drive into one of the least accessible parts of the country. With stops we would arrive in the afternoon — not so good when you have another 5 hour drive back. Our Toyota Yaris, trusty as it was, was not built for the sort of roads we'd be taking it on.
+For one, it was about a 5 hour drive into one of the least accessible parts of the country. With stops, we would arrive in the afternoon — not so good when you have another 5 hour drive back. Our Toyota Yaris, trusty as it was, was not built for the sort of roads we'd be taking it on.
 
-It was also the second to last full day of our entire 7 day trip. We tired from the constant new sights, experiences, physical exertion, and lack of quality food. We'd seen so many majestic mountains, fjords, and waterfalls the prospect of more of those sights was less appealing than it initially was. 
+We were also tired from the constant new sights, experiences, physical exertion, and lack of quality food. We'd seen so many majestic mountains, fjords, and waterfalls the prospect of more of those sights was less appealing than it initially was. 
 
 However, the main issue was April was too early in the season to see puffins. Some research indicated we would have to wait until May for any real chance; we'd most likely see a bunch of seagulls. Driving 10 hours round trip for the slim chance of seeing puffins couldn't really be justified by any reasonable person.
 
 But we weren't reasonable people. 
 
-I was the least up for it: ambivalent but leaning towards no, let's do it next time we're here. Max and *especially* Brandon both wanted to make the trek. A mantra that had arisen throughout the other stupid side quests on the trip was the delightfully Brandon-coined acronym "JNF" (job not finished). Almost two years later, I'm certain following it will continue to decrease my expected lifespan.  
+I was the least up for it: ambivalent but leaning towards no, let's do it next time we're here. Max and *especially* Brandon both wanted to make the trek. A mantra that had arisen throughout the other stupid side quests on the trip was the delightfully Brandon-coined acronym "JNF" (job not finished). 
+
+Almost two years later, I'm certain following it will continue to decrease my expected lifespan.  
 
 ![Puffins! (not my picture)](/images/puffins.png#small)
 
 
 Majority rules so we decided on going. The above factors were reasonable but unimpressive excuses. We had already done a bunch of stupid things. We'd traveled thousands of miles from home and our study abroad homes to be here. We'd climbed [Mt. Brandy](https://www.google.com/maps/place/65%C2%B042'51.7%22N+16%C2%B043'49.9%22W/@65.7143448,-16.7322872,303m/data=!3m1!1e3!4m4!3m3!8m2!3d65.7143694!4d-16.7305333?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D) in deep snow. A long drive and being tired was the worst excuse to not take the chance at spotting such an iconic creature.
 
-So we departed our Airbnb in search of those puffins. As we drove through the rolling arctic tundra, anticipation that we were embarking on a final quest was building.
+So we departed our Airbnb in search of those puffins. We drove through the rolling arctic tundra, anticipation that we were embarking on a final quest was building.
 
 ![Icelandic tundra](/images/iceland-tundra.jpg#large)
 
-As we approached the coast and the distant landscape revealed itself, we could see the rising, rolling fjords of the Westfjords across the grey water. It wasn't as majestic as what we had seen the past few days, but there was a grounded beauty to their gentle slopes and snow coated tops.
+As we approached the coast and the distant landscape revealed itself, we could see the rising fjords of the Westfjords across the grey water. It wasn't as majestic as what we had seen the past few days, but there was a grounded beauty to their gentle slopes and snow coated tops.
 
 ![Gentle fjords](/images/iceland-grey-fjords.jpg#large)
 
@@ -91,29 +93,29 @@ The drive forward kept on getting more and more majestic. It was well into the a
 
 At some point the rattling disappeared, which we found interesting. On inspection the metal had bent SO far back it could clear the ground itself. The absurdity and resolution of the rattling noise was motivation to keep going.
 
-We get finally reach the cliffs to see a SINGLE other car at the famous location. Given how late it was in the day (6 pm) and the early season for tourism and puffins, that wasn't surprising.
+We finally reach the cliffs to see a SINGLE other car at the parking lot. It wasn't surprising ggiven how late it was in the day (6 pm) and it being the early season for tourism and puffins.
 
 ![](/images/latrabjarg-cliffs.jpg#large)
 
-We climbed a snow covered trail to the cliffs. Ahead of us was 100% open ocean, something we really haven't gotten to see with all the fjords. It felt like we were on the edge of the known world, staring into the distance what Vikings colonizing America would've seen. We'd made it.
+We climbed a snow covered trail to the cliffs. Ahead of us was 100% open ocean, something we really hadn't gotten to see with all the fjords on the way. It felt like we were on the edge of the known world, staring across the windswept ocean seeing what Vikings colonizing America would've seen. We'd made it.
 
 ![pic: Max](/images/latrabjarg-cliffs2.jpg#large)
 
-But our goal of seeing the puffins was elusive. We scanned the cliff faces, seeing countless white seagulls. We kept looking for ages, all the while taking the pictures and video that was mandatory for such a journey. More looking, but no puffins.
+But our goal of seeing the puffins was elusive. We scanned the cliff faces, seeing countless white seagulls, and hearing their endless squawks . We kept looking for ages, all the while taking the pictures and video that was mandatory for finishing such a journey. More looking, but no puffins.
 
 I was empty. In sort of defeatist, that's to be expected way. At some point that feeling became an almost resigned gratefulness. We had done so much on this trip. We climbed a glacier, saw *auroras*, went bathing in lagoons, and hiked a bunch of random mountains. Not everything was meant to be.
 
-The wind began really picking up and not all of us had our thickest layers on so Max and I began trudging back to the car. Brandon was silent most of the time we were up there. He remarked a few times how disappointed and emotional he was. I was too, but I thought it was no use hanging around. We'd tried, and that's what mattered.
+The windy cold was getting to us and not all of us had our thickest layers on so Max and I began trudging back to the car. Brandon was silent most of the time we were up there. He remarked a few times how disappointed and emotional he was. I was too, but I thought it was no use hanging around miserable. We'd tried, and that's what mattered.
 
-As Max and I made it to the bottom of the trail Brandon called out and frantically waved to us, but refused to elaborate when we asked. A small "really??" rung in my head as I scrambled back up the snow covered trail, in disbelief but hopeful. We saw Brandon standing with phone in hand recording a pair of puffins perched right below the edge of the cliff. In this moment we knew we had won, and the next minute we stood in excited silence recording them before they disappeared.
+As Max and I made it to the bottom of the trail, Brandon, still at the top, called out and frantically waved to us, but refused to elaborate when we inquired. A small "really??" rung in my head as I scrambled back up the snow covered trail, in disbelief but hopeful. We saw Brandon, phone in hand, recording a pair of puffins perched right below the edge of the cliff. In this moment we were overwhelmed with joy knowing we had won, and the next minute we stood in giddy silence recording them before they flew off.
 
 ![WE FOUND THEM](/images/puffins-victory.jpg#large)
 
-"JF". Job finished. We had done what we set out to do. By such slim odds we had found the puffins of Látrabjarg. Suddenly the hidden disappointment of having driven 388 kilometers to get there was gone
+Job finished. We had done what we set out to do. By such slim odds we had found the puffins of Látrabjarg. Suddenly the hidden disappointment of having driven 388 kilometers to get there was gone.
 
 ![pic: max](/images/puffin-max.jpg)
 
-## the return of the kings (the kings almost died)
+## the return of the king (the king nearly died)
 
 Our drive back was no less than treacherous.
 
@@ -133,7 +135,7 @@ The night drive back went from joyous to treacherous to hallucinatory. We were i
 
 ![Sliver of an aurora we spotted](/images/aurora-westfjords.jpg#large)
 
-Max and I took turns driving while Brandon slept in the back. Although he's almost certainly indignant reading this, he helped on the drive there immensely. Max and I held the fort down, instantly slipping into comas each time we got off the wheel. By the time we were 10 minutes out from our accomodation Max heaved a huge groan and said he had to get off. We were so tired that neither of us could hold out for an additional few miles without falling asleep. Brandon took the wheel and finished the job.
+Max and I took turns driving while Brandon slept in the back. Although he's almost certainly indignant reading this, he helped on the drive there immensely. Max and I held the fort down, instantly slipping into comas each time we got off the wheel. By the time we were 10 minutes out from our accommodation Max heaved a huge groan and said he had to get off. We were so tired that neither of us could hold out for an additional few miles without falling asleep. Brandon took the wheel and finished the job.
 
 We returned the fully insured car two days later. "A piece of the car is in the trunk by the way."
 
@@ -142,5 +144,4 @@ Even if we never saw the puffins, maybe everything would've been alright. We wou
 
 You won't get what you want without believing in it. So believe, even foolishly, like your life depends on it.
 
-![The boys](/images/westfjords-sunset-pose.jpg#large)
-
+![](/images/westfjords-sunset-pose.jpg#large)
