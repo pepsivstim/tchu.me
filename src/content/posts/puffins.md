@@ -30,7 +30,7 @@ Almost two years later, I'm certain following it will continue to decrease my ex
 
 Majority rules so we decided on going. The above factors were reasonable but unimpressive excuses. We had already done a bunch of stupid things. We'd traveled thousands of miles from home and our study abroad homes to be here. We'd climbed [Mt. Brandy](https://www.google.com/maps/place/65%C2%B042'51.7%22N+16%C2%B043'49.9%22W/@65.7143448,-16.7322872,303m/data=!3m1!1e3!4m4!3m3!8m2!3d65.7143694!4d-16.7305333?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D) in deep snow. A long drive and being tired was the worst excuse to not take the chance at spotting such an iconic creature.
 
-So we departed our Airbnb in search of those puffins. We drove through the rolling arctic tundra, anticipation that we were embarking on a final quest was building.
+So we departed our Airbnb in search of those puffins. We drove through the rolling arctic tundra, anticipation that we were embarking on a final quest building.
 
 ![Icelandic tundra](/images/iceland-tundra.jpg#large)
 
@@ -55,14 +55,14 @@ At this point I was the one driving, proceeding relatively slowly along the edge
 
 ![](/images/westfjords-beauty.jpg#large)
 
-## a mistake and the best stupid decision that followed 
+## a mistake and the best, stupid decision that followed 
 With sheer cliff face to our left and open ocean to our right, I came across a soccer ball sized rock sitting smack in the middle of my path. Not thinking much of it and generally wanting to avoid moving far in either direction, I made one of the stupidest mistakes of all time: I drove over it. 
 
 ![The road quality the final hour of the drive](/images/westfjords-majesty.jpg#large)
 
 Don't mind that we were in a Toyota Yaris, a hardy but minuscule city car that could barely fit us and our luggage; not exactly designed to have much ground clearance. Why would you need clearance to drive 25 mph downtown?
 
-Well I drove right over that thing, or rather, I drove onto it. A large clunk emanated from the bottom of the Yaris, with several more smaller clunks as if the rock was trying and failing to be ground by a blender. The clunking sound continued for a couple minutes before it finally disappeared. Soon a metallic rattling sound replaced it. When the rattling didn't stop a mile later we finally took a step out to look at what was going on. 
+Well I drove right over that rock, or rather, I drove onto it. A large clunk emanated from the bottom of the Yaris, with several more smaller clunks as if the rock was trying and failing to be ground by a blender. The clunking sound continued for a couple minutes before it finally disappeared. Soon a metallic rattling sound replaced it. When the rattling didn't stop a mile later we finally took a step out to look at what was going on. 
 
 I wish I had taken a picture of what we saw. A metal sheet at the bottom of the car had been bent backwards by the rock into a sideways U. The sound we were hearing was the bent metal being dragged along the gravel road.
 
@@ -70,28 +70,28 @@ I wish I had taken a picture of what we saw. A metal sheet at the bottom of the 
 
 At this point my unsettledness turned into internal panic. I had just torn open the underside of our car by driving over that rock. Now we could've been leaking fuel or oils or whatever. We were at least an hour away from the nearest town. Worst comes to worst, we'd have to try to call emergency services to pick us up in a place with no cellular service.
 
-Now in the grand scheme of things was this a threat to our lives? Probably not. Then again, if some braking or steering fluid came out we'd just careen over the edge of a cliff we couldn't steer away from. I didn't know how car internals worked or if that was a reasonable assumption given the visible damage. 
+Now in the grand scheme of things was this a threat to our lives? Probably not. But it sure felt like if some braking or steering fluid leaked, we'd careen over the edge of a cliff we couldn't brake or steer away from. I didn't know how car internals worked or if that was a reasonable assumption given the visible damage. 
 
-To have this happen on our second to last day with our goal almost in sight was a pathetic end. I didn't want whoever would come rescue us to give us a chiding about driving a city car to this remote region. More fuel for the stupid tourists narrative.
+To have this happen on our second to last day with our goal almost in sight was a pathetic end. I didn't want whoever would come rescue us to give us a chiding about foolishly driving a city car to this remote region. Just more fuel for the stupid tourists narrative.
 
-We found a mound of dirt to jack up the car on one wheel and examine the underside more closely, but even someone as car-uneducated as me knew actually crawling under was asinine.
+We found a mound of dirt to jack up the car on one wheel and examine the underside's damage more closely, but even someone as car-uneducated as me knew actually crawling under was asinine.
 
 At this point we could either proceed or go home dejectedly. Calling Icelandic 911 was not in the list of possible options. We'd call if our car actually started malfunctioning. 
 
 ![📸: max](/images/westfjords-car-view.jpg#large)
 
-I wanted to go home out of panic. But I knew driving straight home would be no different than driving forward another hour if the car was actually broken. At the same time, there could be fluid leakage that would cause the car be gradually less functional. The prospect of missing out on something, in my mind, we likely wouldn't see anyway was not worth the increased risk of continuing.
+I wanted to go home out of panic. But I knew driving straight home would be no different than driving forward another hour if the car was actually broken. At the same time, any hydraulic fluid leakage could cause the car to be gradually less functional. The prospect of missing out on something, in my mind, we likely wouldn't see anyway was not worth the increased risk of continuing.
 
-However, the guilt of having possibly ended our chances of seeing the puffins also weighed on me. I didn't WANT to go back, but my logical side knew continuing was objectively worse than going back now.
+However, the guilt of having possibly ended our chances of seeing the puffins also weighed on me. I didn't WANT to go back, but my logical side knew continuing was objectively worse than going back.
 
-Max was having second thoughts, but Brandon had been so committed from the beginning. Eventually both of them settled on continuing, so I gave in and we went onwards. It would prove to be one of the best (and stupid) decisions in all my adventures.
+Max was having second thoughts, but Brandon was as committed as he was from the beginning. Eventually both of them settled on continuing, so I gave in and we went onwards. It would prove to be one of the best (and stupid) decisions in all my adventures.
 
-The rattling sound of metal scraping against the road continued for the next 20 minutes. You can imagine how distressing that was.
+The sound of metal scraping against the road continued for the next 20 minutes. You can imagine how distressing that was.
 
 ## the puffins of Látrabjarg
 The drive forward kept on getting more and more majestic. It was well into the afternoon so the sun was hanging lower and lower. The vast shadows the fjords cast on the deep blue water was magnificent.
 
-At some point the rattling disappeared. On inspection the metal had bent SO far back it could clear the ground itself. The absurdity and resolution of the rattling noise was motivation to keep going.
+At some point the rattling disappeared. On inspection the metal had bent SO far back it could clear the ground itself. The absurdity and resolution of the scraping noise was motivation to keep going.
 
 We finally reach the cliffs to see a SINGLE other car at the parking lot. It wasn't surprising given how late it was in the day (6 pm) and it being the early season for tourism and puffins.
 
