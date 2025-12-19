@@ -48,7 +48,7 @@ function Home() {
         {latestPost ? (
           <div className="mb-12 group">
             {latestPost.image && (
-              <div className="flex justify-center w-full mb-6 max-w-[400px] mx-auto">
+              <div className="flex justify-center w-full mb-6 max-w-[300px] mx-auto">
                 <Link to={`/blog/${latestPost.slug}`} className="block w-full">
                   <img
                     src={latestPost.image}
@@ -67,11 +67,7 @@ function Home() {
               </p>
             </Link>
           </div>
-        ) : (
-          <p className="text-xl md:text-2xl text-ink-light mb-12 font-light italic leading-relaxed">
-            Proudly vibecoded
-          </p>
-        )}
+        ) : null}
         <div className="flex justify-center gap-8">
           <Link to="/blog" className="bg-ink-black text-paper-base px-10 py-3 rounded-md hover:bg-ink-light transition-all duration-300 shadow-sm font-medium text-lg cursor-pointer">
             Read Blog
