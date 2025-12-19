@@ -157,4 +157,4 @@ But to not try your hardest at what you want is accepting mediocrity. That day, 
 
 You won't get what you want without believing in it. So believe, even foolishly, like your life depends on it.
 
-![](/images/westfjords-sunset-pose.jpg#large)
+![](/images/westfjords-sunset-pose.jpg)

@@ -8,18 +8,15 @@ function Header() {
     const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-paper-base/90 border-b border-paper-border transition-all duration-300">
-            <div className="w-[95%] md:w-[60%] mx-auto px-4 md:px-8 py-6 flex justify-between items-center relative">
-                <Link to="/" className="text-2xl font-serif font-bold text-ink-black tracking-tight cursor-pointer z-50" onClick={closeMenu}>
+        <nav className="fixed top-0 left-0 w-full z-50 bg-paper-base transition-all duration-300">
+            <div className="w-full max-w-4xl mx-auto px-4 md:px-8 py-3 md:py-6 flex justify-between items-center relative border-b border-paper-border">
+                <Link to="/" className="text-xl md:text-2xl font-serif font-bold text-ink-black tracking-tight cursor-pointer z-50" onClick={closeMenu}>
                     tchu.me
                 </Link>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex gap-8">
-                    <a href="#experience" className="text-ink-light hover:text-ink-black font-medium transition duration-300 relative group">
-                        Experience
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ink-black transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+
                     <Link to="/blog" className="text-ink-light hover:text-ink-black font-medium transition duration-300 relative group">
                         Blog
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ink-black transition-all duration-300 group-hover:w-full"></span>
@@ -49,9 +46,7 @@ function Header() {
 
                 {/* Mobile Menu Overlay */}
                 <div className={`fixed inset-0 bg-paper-base flex flex-col items-center justify-center gap-10 transition-transform duration-300 ease-in-out md:hidden z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                    <a href="#experience" onClick={closeMenu} className="text-2xl text-ink-black font-serif font-bold hover:text-ink-light transition-colors">
-                        Experience
-                    </a>
+
                     <Link to="/blog" onClick={closeMenu} className="text-2xl text-ink-black font-serif font-bold hover:text-ink-light transition-colors">
                         Blog
                     </Link>
