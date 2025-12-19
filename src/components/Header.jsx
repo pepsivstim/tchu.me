@@ -55,7 +55,7 @@ function Header() {
     return (
         <>
             <nav className={`fixed top-0 left-0 w-full z-50 bg-paper-base transition-transform duration-300 ${isVisible || isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-                <div className="w-full max-w-4xl mx-auto px-4 lg:px-8 py-3 lg:py-6 flex justify-between items-center relative border-b border-paper-border">
+                <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 py-3 lg:py-6 flex justify-between items-center relative border-b border-paper-border">
                     <Link to="/" className="text-xl lg:text-2xl font-serif font-bold text-ink-black tracking-tight cursor-pointer z-50" onClick={closeMenu}>
                         tchu.me
                     </Link>
