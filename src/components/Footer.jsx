@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <footer className="bg-paper-base text-ink-black pb-3 lg:pb-8 mt-auto">
-            <div className="w-full max-w-4xl mx-auto px-4 lg:px-8 flex flex-row justify-center min-[320px]:justify-between items-center gap-2 lg:gap-0 border-t border-paper-border pt-3 lg:pt-8">
+            <div className="w-full max-w-4xl mx-auto px-6 md:px-12 lg:px-8 flex flex-row justify-center min-[320px]:justify-between items-center gap-2 lg:gap-0 border-t border-paper-border pt-3 lg:pt-8">
                 <Link to="/" className="text-lg text-ink-light font-light hover:text-ink-black transition-colors">
                     © 2025 Timothy Chu
                 </Link>
