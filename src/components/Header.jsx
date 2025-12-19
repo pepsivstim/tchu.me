@@ -11,7 +11,7 @@ function Header() {
         <nav className="fixed top-0 left-0 w-full z-50 bg-paper-base/90 border-b border-paper-border transition-all duration-300">
             <div className="w-[95%] md:w-[60%] mx-auto px-4 md:px-8 py-6 flex justify-between items-center relative">
                 <Link to="/" className="text-2xl font-serif font-bold text-ink-black tracking-tight cursor-pointer z-50" onClick={closeMenu}>
-                    tchu.blog
+                    tchu.me
                 </Link>
 
                 {/* Desktop Navigation */}
