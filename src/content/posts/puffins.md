@@ -2,6 +2,7 @@
 title: "westfjords, puffins, and a broken car"
 date: "2025-12-18"
 excerpt: "a tale of 3 friends finishing the job"
+image: "/images/puffin-max.jpg"
 ---
 In April 2024 I went to Iceland with two close friends. It was our 2nd to last full day circling Iceland's iconic Ring Road. We had a decision to make.
 
