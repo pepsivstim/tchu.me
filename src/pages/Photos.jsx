@@ -131,8 +131,8 @@ function Photos() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-paper-base text-ink-black py-24">
-            <div className="w-[95%] md:w-[60%] mx-auto px-4 md:px-8">
+        <div className="flex-grow bg-paper-base text-ink-black py-24">
+            <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8">
                 {Object.keys(sections).length !== 0 && (
                     <div className="space-y-16">
                         {/* Render General first if exists */}

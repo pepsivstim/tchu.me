@@ -41,7 +41,7 @@ function Home() {
     loadLatestPost();
   }, []);
   return (
-    <div className="flex-grow flex items-center justify-center px-4 pt-28 pb-4 md:p-4 bg-paper-base text-ink-black">
+    <div className="flex-grow flex items-center justify-center px-6 md:px-16 lg:px-8 pt-28 pb-4 bg-paper-base text-ink-black">
 
       {/* Content Container - Minimalist Typography */}
       <div className="text-center max-w-3xl w-full z-10">
@@ -68,14 +68,6 @@ function Home() {
             </Link>
           </div>
         ) : null}
-        <div className="flex justify-center gap-8">
-          <Link to="/blog" className="bg-ink-black text-paper-base px-10 py-3 rounded-md hover:bg-ink-light transition-all duration-300 shadow-sm font-medium text-lg cursor-pointer">
-            Read Blog
-          </Link>
-          <Link to="/photos" className="bg-transparent border border-ink-black text-ink-black px-10 py-3 rounded-md hover:bg-ink-black hover:text-paper-base transition-all duration-300 shadow-sm font-medium text-lg cursor-pointer">
-            Photos
-          </Link>
-        </div>
       </div>
     </div>
   );
