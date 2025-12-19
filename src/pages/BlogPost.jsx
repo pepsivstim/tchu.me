@@ -61,7 +61,7 @@ function BlogPost() {
     }, [slug]);
 
     return (
-        <div className="min-h-screen bg-paper-base text-ink-black py-24">
+        <div className="min-h-screen bg-paper-base text-ink-black pt-24 pb-12">
             <article className="w-[95%] md:w-[60%] mx-auto px-4 md:px-8 prose prose-stone prose-lg md:prose-xl font-serif prose-h1:mb-4">
                 <Link to="/blog" className="no-underline text-ink-light hover:text-ink-black mb-8 block transition-colors">
                     ← Back to all posts
