@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="bg-paper-base text-ink-black py-8 mt-auto sticky bottom-0 z-10">
-            <div className="w-full max-w-4xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 border-t border-paper-border pt-8">
+        <footer className="bg-paper-base text-ink-black pb-3 md:pb-8 mt-auto">
+            <div className="w-full max-w-4xl mx-auto px-4 md:px-8 flex flex-row justify-center min-[320px]:justify-between items-center gap-2 md:gap-0 border-t border-paper-border pt-3 md:pt-8">
                 <Link to="/" className="text-lg text-ink-light font-light hover:text-ink-black transition-colors">
                     © 2025 Timothy Chu
                 </Link>
-                <div className="flex gap-4 items-center">
+                <div className="hidden min-[320px]:flex gap-4 items-center">
                     <a href="https://www.linkedin.com/in/timchu2002/" target="_blank" rel="noopener noreferrer" className="text-ink-light hover:text-ink-black transition-colors" aria-label="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>

@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
+
+    const isActive = (path) => location.pathname === path || location.pathname.startsWith(`${path}/`);
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-paper-base transition-all duration-300">
@@ -16,14 +19,13 @@ function Header() {
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex gap-8">
-
-                    <Link to="/blog" className="text-ink-light hover:text-ink-black font-medium transition duration-300 relative group">
+                    <Link to="/blog" className={`${isActive('/blog') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} font-medium transition duration-300 relative group`}>
                         Blog
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ink-black transition-all duration-300 group-hover:w-full"></span>
+                        <span className={`absolute bottom-0 left-0 h-0.5 bg-ink-black transition-all duration-300 ${isActive('/blog') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                     </Link>
-                    <Link to="/photos" className="text-ink-light hover:text-ink-black font-medium transition duration-300 relative group">
+                    <Link to="/photos" className={`${isActive('/photos') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} font-medium transition duration-300 relative group`}>
                         Photos
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ink-black transition-all duration-300 group-hover:w-full"></span>
+                        <span className={`absolute bottom-0 left-0 h-0.5 bg-ink-black transition-all duration-300 ${isActive('/photos') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                     </Link>
                 </div>
 
