@@ -41,19 +41,32 @@ function Home() {
     loadLatestPost();
   }, []);
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-paper-base text-ink-black">
+    <div className="min-h-screen flex items-center justify-center px-4 pt-28 pb-4 md:p-4 bg-paper-base text-ink-black">
 
       {/* Content Container - Minimalist Typography */}
       <div className="text-center max-w-3xl w-full z-10">
         {latestPost ? (
-          <Link to={`/blog/${latestPost.slug}`} className="block mb-12 group">
-            <h2 className="text-xl md:text-2xl text-ink-black font-serif italic mb-2 group-hover:text-ink-light transition-colors">
-              Latest: {latestPost.title}
-            </h2>
-            <p className="text-lg text-ink-light font-light leading-relaxed">
-              {latestPost.excerpt}
-            </p>
-          </Link>
+          <div className="mb-12 group">
+            {latestPost.image && (
+              <div className="flex justify-center w-full mb-6 max-w-[400px] mx-auto">
+                <Link to={`/blog/${latestPost.slug}`} className="block w-full">
+                  <img
+                    src={latestPost.image}
+                    alt={latestPost.title}
+                    className="w-full aspect-square object-cover rounded-md shadow-sm transition-transform duration-500 group-hover:scale-[1.01]"
+                  />
+                </Link>
+              </div>
+            )}
+            <Link to={`/blog/${latestPost.slug}`} className="block">
+              <h2 className="text-xl md:text-2xl text-ink-black font-serif italic mb-2 group-hover:text-ink-light transition-colors">
+                Latest: {latestPost.title}
+              </h2>
+              <p className="text-lg text-ink-light font-light leading-relaxed">
+                {latestPost.excerpt}
+              </p>
+            </Link>
+          </div>
         ) : (
           <p className="text-xl md:text-2xl text-ink-light mb-12 font-light italic leading-relaxed">
             Proudly vibecoded
