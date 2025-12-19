@@ -13,7 +13,17 @@ function BlogPost() {
     const [meta, setMeta] = useState({});
     const [selectedImage, setSelectedImage] = useState(null);
 
-    // ...
+    // Lock body scroll when lightbox is open
+    useEffect(() => {
+        if (selectedImage) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [selectedImage]);
 
     useEffect(() => {
         const loadPost = async () => {

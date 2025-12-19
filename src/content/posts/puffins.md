@@ -50,20 +50,20 @@ Kleifabúi, a large stone monument resembling a person erected by road construct
 Garðar BA 64, a whaling ship wreck on the shores of one of those inlets. We climbed through and explored the entire structure, marveling at the age of the ship and worried that any wrong step could cause a tetanus-filled nightmare.
 ![Garðar BA 64 (pic: Max)](/images/shipwreck-iceland.jpg#large)
 
-By the time we were about an hour out from the cliffs, the roads had become completely gravel and there were sections that didn't have any guardrails. Not focusing would've been a life-ending threat.
+By the time we were about an hour out from the cliffs, the roads had become completely gravel and there were sections that didn't have any guardrails. Not focusing on the driving would've been deadly.
 
 At this point I was the one driving, proceeding relatively slowly along the edge of the water with absolutely gorgeous views of the fjord. The clouds had cleared up and the sun began shimmering in the ocean and reflecting off the peaks. Now that we were right at the foot of — and across a narrow fjord from — these seemingly mythical landforms, their towering might had become apparent.
 
 ![](/images/westfjords-beauty.jpg#large)
 
 ## a mistake and the best, stupid decision that followed 
-With sheer cliff face to our left and open ocean to our right, I came across a soccer ball sized rock sitting smack in the middle of my path. Not thinking much of it and generally wanting to avoid moving far in either direction, I made one of the stupidest mistakes of all time: I drove over it. 
+With sheer cliff face to our left and open ocean to our right, I came across a soccer ball sized rock sitting smack in the middle of my path. Not thinking much of it and generally wanting to avoid steering far in either direction, I made one of the stupidest mistakes of all time: I drove over it. 
 
 ![The road quality the final hour of the drive](/images/westfjords-majesty.jpg#large)
 
 Don't mind that we were in a Toyota Yaris, a hardy but minuscule city car that could barely fit us and our luggage; not exactly designed to have much ground clearance. Why would you need clearance to drive 25 mph downtown?
 
-Well I drove right over that rock, or rather, I drove onto it. A large clunk emanated from the bottom of the Yaris, with several more smaller clunks as if the rock was trying and failing to be ground by a blender. The clunking sound continued for a couple minutes before it finally disappeared. Soon a metallic rattling sound replaced it. When the rattling didn't stop a mile later we finally took a step out to look at what was going on. 
+Well I drove right over that rock, or rather, I drove onto it. A large clunk emanated from the bottom of the Yaris, with several more smaller clunks as if the rock was trying and failing to be ground by a blender. The clunking sound continued for a couple minutes before it finally disappeared. Soon a metallic scraping sound replaced it. When the scraping didn't stop a mile later we finally took a step out to look at what was going on. 
 
 I wish I had taken a picture of what we saw. A metal sheet at the bottom of the car had been bent backwards by the rock into a sideways U. The sound we were hearing was the bent metal being dragged along the gravel road.
 
@@ -81,9 +81,9 @@ At this point we could either proceed or go home dejectedly. Calling Icelandic 9
 
 ![📸: max](/images/westfjords-car-view.jpg#large)
 
-I wanted to go home out of panic. But I knew driving straight home would be no different than driving forward another hour if the car was actually broken. At the same time, any hydraulic fluid leakage could cause the car to be gradually less functional. The prospect of missing out on something, in my mind, we likely wouldn't see anyway was not worth the increased risk of continuing.
+I wanted to go home out of panic. But I knew driving straight home would be no different than driving forward another hour if the car was actually broken. At the same time, any hydraulic fluid leakage could cause the car to be gradually less functional. The prospect of missing out on puffins — something, in my mind, we likely wouldn't see anyway was not worth the increased risk of continuing.
 
-However, the guilt of having possibly ended our chances of seeing the puffins also weighed on me. I didn't WANT to go back, but my logical side knew continuing was objectively worse than going back.
+However, the guilt of having possibly ended our slim chances of seeing the puffins also weighed on me. What *if* they were there? I didn't WANT to go back, but my logical side knew continuing was objectively worse than going back.
 
 Max was having second thoughts, but Brandon was as committed as he was from the beginning. Eventually both of them settled on continuing, so I gave in and we went onwards. It would prove to be one of the best (and stupid) decisions in all my adventures.
 
@@ -92,9 +92,9 @@ The sound of metal scraping against the road continued for the next 20 minutes. 
 ## the puffins of Látrabjarg
 The drive forward kept on getting more and more majestic. It was well into the afternoon so the sun was hanging lower and lower. The vast shadows the fjords cast on the deep blue water was magnificent.
 
-At some point the rattling disappeared. On inspection the metal had bent SO far back it could clear the ground itself. The absurdity and resolution of the scraping noise was motivation to keep going.
+At some point the metallic scraping sound disappeared. On inspection the metal had bent SO far back it now cleared the ground itself. The absurdity and resolution of the scraping noise was motivation to keep going.
 
-We finally reach the cliffs to see a SINGLE other car at the parking lot. It wasn't surprising given how late it was in the day (6 pm) and it being the early season for tourism and puffins.
+We finally reach the cliffs to see a single other car at the parking lot. It wasn't surprising given how late it was in the day (6 pm) and it being the early season for tourism and puffins.
 
 ![](/images/latrabjarg-cliffs.jpg#large)
 
@@ -106,9 +106,13 @@ But our goal of seeing the puffins was elusive. We scanned the cliff faces, seei
 
 I was empty. In sort of defeatist, that's to be expected way. At some point that feeling became an almost resigned gratefulness. We had done so much on this trip. We climbed a glacier, saw *auroras*, went bathing in lagoons, and hiked a bunch of random mountains. We had done a lot, more than we could ask for, but not everything was meant to be.
 
-The windy cold was getting to us and not all of us had our thickest layers on so Max and I began trudging back to the car. Brandon was silent most of the time we were up there. He remarked a few times how disappointed and emotional he was. I was too, but I thought it was no use hanging around miserable. We'd tried, and that's what mattered.
+Brandon was silent most of the time we were up there. He remarked a few times how disappointed and emotional he was. I secretly was too, but I thought it was no use hanging around miserable. We'd tried, and that's what mattered.
 
-As Max and I made it to the bottom of the trail, Brandon, still at the top, called out and frantically waved to us, but refused to elaborate when we inquired. A small "really??" rung in my head as I scrambled back up the snow covered trail, in disbelief but hopeful. We saw Brandon, phone in hand, recording a pair of puffins perched right below the edge of the cliff. In this moment we were overwhelmed with joy knowing we had won, and the next minute we stood in giddy silence recording them before they flew off.
+The windy cold was getting to us and not all of us had our thickest layers on so Max and I began trudging back to the car. 
+
+As Max and I made it to the bottom of the trail, Brandon, still at the top, called out and frantically waved to us, but refused to elaborate when we inquired. A small "really??" rung in my head as I scrambled back up the snow covered trail, in disbelief but hopeful. It was now or never. Every second counted. 
+
+As we emerged over the ridge we saw Brandon, phone in hand, recording a pair of puffins perched right below the edge of the cliff. In this moment we were overwhelmed with joy knowing we had won, and the next minute we stood in giddy silence recording them before they flew off.
 
 ![WE FOUND THEM](/images/puffins-victory.jpg#large)
 
@@ -120,28 +124,32 @@ Job finished. We had done what we set out to do. By such slim odds we had found 
 
 Our drive back was no less than treacherous.
 
-As we made our way back, we came back across the same patch of frozen snow that we passed through on the way to the cliffs. The patch was high but had two deep tire tracks we'd have to fit our car through. We passed through the same as we did earlier, really pushing it through after getting stuck.
+We came back across the same patch of frozen snow that we had encountered on the way to the cliffs. The patch was deep but had two indented tire tracks we'd have to fit our car through. We really had to push the poor Yaris hard to get through after the underside got stuck on the ice.
 
-As the people who got out to guide the driver got back in, we noticed a shiny piece of metal that wasn't there before. It was the sheet of metal on the underside of the car, and it had been torn clean off, its mangled form resting on the ice. Another absurdly comical moment in a rollercoaster of a day. 
+As the people who got out to guide the driver got back in, they noticed a shiny piece of metal that wasn't there before. It was the bent sheet of metal from the underside of the car. It had been torn clean off, its mangled form resting on the ice. That was another absurdly comical moment in a rollercoaster of a day. 
 
 ![I'm dead](/images/yaris-piece.jpg#large)
 
-On the way back we found the rock that caused the damage to the Yaris and in a moment of glorious vindication tossed it into the ocean. Job felt finished. It wasn't.
+On the way back we found the rock that caused the damage to the Yaris and which caused so much anxiety in all of us. In a moment of poetic triumph we tossed the rock back into the ocean, ending the rocky threat for other unsuspecting tourists and closing this chapter in our story.
 
-Max had to take a work call so that delayed us even more. But we stopped at the statue we passed earlier during the sunset and my goodness that was one of the most gorgeous sunsets I've ever seen. Night fell but there remained a dim glow in the horizon because of Iceland's rapidly lengthening days. 
+We were intensely tired from all the driving and dreaded the drive to come. Max had to take a work call at the Kleifabúi monument we stopped at earlier. We enjoyed our last sunset in Iceland, and my goodness that was one of the most gorgeous sunsets I've ever seen. 
 
 ![Kleifabúi gazing at the sunset (📸: brandy)](/images/statue-sunset-iceland.jpg#large)
 
-The night drive back went from joyous to treacherous to hallucinatory. We were intensely tired from all the driving and dreaded the drive to come. We actually saw the Northern lights again, our second time after our initial viewing in Egilsstaðir. It was a brief wisp of aurora borealis but not any less magical.
+We actually saw the Northern lights again, our second time after our initial viewing in Egilsstaðir. It was a brief wisp of aurora borealis but not any less magical.
 
 ![Sliver of an aurora we spotted](/images/aurora-westfjords.jpg#large)
 
-Max and I took turns driving while Brandon slept in the back. Although he's almost certainly indignant reading this, he helped on the drive there immensely. Max and I held the fort down, instantly slipping into comas each time we got off the wheel. By the time we were 10 minutes out from our accommodation Max heaved a huge groan and said he had to get off. We were so tired that neither of us could hold out for an additional few miles without falling asleep. Brandon took the wheel and finished the job.
+The night drive back went from joyous to treacherous to hallucinatory. Max and I took turns driving while Brandon slept in the back. Although he's almost certainly indignant reading this. He did help on the drive there immensely. 
+
+Max and I held the fort down, instantly slipping into comas each time we got off the wheel. By the time we were 10 minutes out from our accommodation Max heaved a huge groan and said he had to get off. We were so tired that neither of us could hold out for an additional few miles without falling asleep. Brandon took the wheel and finished the job.
 
 We returned the fully insured car two days later. "A piece of the car is in the trunk by the way."
 
 ## the ending we chose
-Even if we turned back early after only seeing seagulls, maybe everything would've been alright. We would've accepted that we "tried", bemoaning fate wasn't ours that day. But to not try your hardest at what you want is accepting mediocrity. That day, Brandon remained on that cliff as everyone else gave up. The puffins of Iceland were there.
+Even if we turned back early after only seeing seagulls, maybe everything would've been alright. We would've accepted that we "tried", bemoaning fate wasn't ours that day. 
+
+But to not try your hardest at what you want is accepting mediocrity. That day, Brandon remained on the cliff as everyone else gave up. The puffins of Iceland were there.
 
 You won't get what you want without believing in it. So believe, even foolishly, like your life depends on it.
 
