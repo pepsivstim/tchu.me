@@ -2,8 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* Light Mode (Default) */
+    --color-paper-base: #fdfbf7;
+    /* Warm off-white */
+    --color-paper-border: #e7e5e4;
+    /* Stone 200 */
+    --color-ink-black: #1c1917;
+    /* Stone 900 */
+    --color-ink-light: #57534e;
+    /* Stone 600 */
+  }
+
+  .dark {
+    /* Dark Mode (Inverted) */
+    --color-paper-base: #1c1917;
+    /* Stone 900 */
+    --color-paper-border: #292524;
+    /* Stone 800 */
+    --color-ink-black: #ffffff;
+    /* Pure White (Max visibility for headings) */
+    --color-ink-light: #d6d3d1;
+    /* Stone 300 (Much brighter body text) */
+  }
+}
+
 body {
-    background-color: #fdfbf7;
-    color: #1c1917;
-    min-height: 100vh;
+  background-color: var(--color-paper-base);
+  color: var(--color-ink-black);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

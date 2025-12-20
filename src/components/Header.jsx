@@ -60,11 +60,11 @@ function Header() {
 
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex gap-8">
-                    <Link to="/blog" className={`${isActive('/blog') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} text-lg font-medium transition duration-300 relative group`}>
+                    <Link to="/blog" className={`${isActive('/blog') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} text-lg font-bold transition duration-300 relative group`}>
                         Blog
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-ink-black transition-all duration-300 ${isActive('/blog') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                     </Link>
-                    <Link to="/photos" className={`${isActive('/photos') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} text-lg font-medium transition duration-300 relative group`}>
+                    <Link to="/photos" className={`${isActive('/photos') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} text-lg font-bold transition duration-300 relative group`}>
                         Photos
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-ink-black transition-all duration-300 ${isActive('/photos') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                     </Link>
@@ -90,10 +90,10 @@ function Header() {
 
             {/* Mobile Menu Dropdown */}
             <div className={`absolute top-full left-0 w-full bg-paper-base border-b border-paper-border shadow-sm grid grid-cols-2 py-4 transition-all duration-300 ease-in-out lg:hidden -z-10 ${isMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-4 invisible'}`}>
-                <Link to="/blog" onClick={closeMenu} className="flex items-center justify-center py-3 text-lg font-medium text-ink-light hover:text-ink-black transition-colors border-r border-paper-border">
+                <Link to="/blog" onClick={closeMenu} className="flex items-center justify-center py-3 text-lg font-bold text-ink-light hover:text-ink-black transition-colors border-r border-paper-border">
                     Blog
                 </Link>
-                <Link to="/photos" onClick={closeMenu} className="flex items-center justify-center py-3 text-lg font-medium text-ink-light hover:text-ink-black transition-colors">
+                <Link to="/photos" onClick={closeMenu} className="flex items-center justify-center py-3 text-lg font-bold text-ink-light hover:text-ink-black transition-colors">
                     Photos
                 </Link>
             </div>

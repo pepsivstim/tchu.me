@@ -5,10 +5,12 @@ import BlogPost from './pages/BlogPost';
 import Photos from './pages/Photos';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   return (
     <Router>
+      <ThemeToggle />
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow flex flex-col">

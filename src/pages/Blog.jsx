@@ -11,6 +11,7 @@ function Blog() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
+        document.title = 'Blog | tchu.me';
         const loadPosts = async () => {
             // Import all markdown files from /src/content/posts
             const modules = import.meta.glob('../content/posts/*.md', { query: '?raw', import: 'default' });

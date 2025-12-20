@@ -44,7 +44,7 @@ const ImageWithLoader = ({ photo, onClick }) => {
 
             setVisuals({
                 grayscale: progress,
-                scale: 1.0 + (1 - progress) * 0.01
+                scale: 1.0 + (1 - progress) * 0.02
             });
 
             if (isVisible) {
@@ -126,6 +126,7 @@ function Photos() {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 
     useEffect(() => {
+        document.title = 'Photos | tchu.me';
         const loadPhotos = async () => {
             // Glob recursive to find nested images
             const modules = import.meta.glob('../content/photos/**/*.{jpg,jpeg,png,webp}', { query: '?url', import: 'default' });
