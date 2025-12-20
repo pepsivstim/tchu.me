@@ -44,7 +44,7 @@ const ImageWithLoader = ({ photo, onClick }) => {
 
             setVisuals({
                 grayscale: progress,
-                scale: 1.0 + (1 - progress) * 0.01
+                scale: 1.0 + (1 - progress) * 0.02
             });
 
             if (isVisible) {
