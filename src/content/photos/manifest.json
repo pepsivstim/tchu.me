@@ -5,11 +5,11 @@
     },
     {
         "file": "nyhavn.jpg",
-        "caption": "Nyhavn my second day in Denmark"
+        "caption": "Nyhavn"
     },
     {
         "file": "post-glacier-walk.jpg",
-        "caption": "Fine I'll be the photographer this time"
+        "caption": "Vatnajökull"
     },
     {
         "file": "yaris-back.jpg",
@@ -17,17 +17,14 @@
     },
     {
         "file": "kirosan-summit.jpg",
-        "caption": "Summit of Kirosan (hard climb!)"
-    },
-    {
-        "file": "tim-town.jpg"
+        "caption": "Kirosan"
     },
     {
         "file": "iceland-run-away.jpg",
-        "caption": "It's just the wind"
+        "caption": ""
     },
     {
         "file": "iceland-car-sunset.jpg",
-        "caption": "Great place to take a work call"
+        "caption": ""
     }
 ]
