@@ -48,7 +48,7 @@ We stopped at many sites and overlooks along the way:
 Kleifabúi, a large stone monument resembling a person erected by road construction workers 80 years ago. It was at a high point shrouded by clouds.
 
 Garðar BA 64, a whaling ship wreck on the shores of one of those inlets. We climbed through and explored the entire structure, marveling at the age of the ship and worried that any wrong step could cause a tetanus-filled nightmare.
-![Garðar BA 64 (📸: Max)](/images/shipwreck-iceland.jpg#large)
+![Garðar BA 64 (📸: max)](/images/shipwreck-iceland.jpg#large)
 
 By the time we were about an hour out from the cliffs, the roads had become completely gravel and there were sections that didn't have any guardrails. Not focusing on the driving would've been deadly.
 
@@ -75,7 +75,7 @@ Now in the grand scheme of things was this a threat to our lives? Probably not. 
 
 To have this happen on our second to last day with our goal almost in sight was a pathetic end. I didn't want whoever would come rescue us to give us a chiding about foolishly driving a city car to this remote region. Just more fuel for the stupid tourists narrative.
 
-We found a mound of dirt to jack up the car on one wheel and examine the underside's damage more closely, but even someone as car-uneducated as me knew actually crawling under was asinine.
+We found a mound of dirt to jack up the car on one wheel so we could examine the underside's damage more closely, but even someone as car-uneducated as me knew actually crawling under was asinine.
 
 At this point we could either proceed or go home dejectedly. Calling Icelandic 911 was not in the list of possible options. We'd call if our car actually started malfunctioning. 
 
@@ -100,9 +100,9 @@ We finally reached the cliffs to see a single other car at the parking lot. That
 
 We climbed a snow covered trail to the cliffs. Ahead of us was 100% open ocean, something we really hadn't gotten to see with all the fjords on the way. It felt like we were on the edge of the known world, staring across the windswept ocean seeing what Vikings colonizing America would've seen. We'd made it.
 
-![📸: Max](/images/latrabjarg-cliffs2.jpg#large)
+![📸: max](/images/latrabjarg-cliffs2.jpg#large)
 
-But our goal of seeing the puffins was elusive. We scanned the cliff faces, seeing countless white seagulls nested on the cliff face and soaring around. Their endless squawks mixing with the drowning, restless wind. We kept looking for ages, all the while taking the pictures and video that was mandatory for finishing such a journey. More looking, but no puffins.
+But our goal of seeing the puffins was elusive. We scanned the cliff faces, seeing countless white seagulls nested on the cliff face and soaring around; their endless squawks mixing with the drowning, restless wind. We kept looking for ages, all the while taking the pictures and video that was mandatory for finishing such a journey. More looking, but no puffins.
 
 I was empty. In sort of defeatist, that's to be expected way. At some point that feeling became an almost resigned gratefulness. We had done so much on this trip. We climbed a glacier, saw *auroras*, went bathing in lagoons, and hiked a bunch of random mountains. We had done a lot, more than we could ask for, but not everything was meant to be.
 
@@ -132,19 +132,19 @@ It was the bent sheet of metal from the underside of the car. It had been torn c
 
 ![I'm dead](/images/yaris-piece.jpg#large)
 
-On the way back, we found the rock that caused the damage to the Yaris and the source of the previous hours of anxiety. In a moment of poetic triumph, we tossed the rock back into the ocean, ending the threat to other unsuspecting drivers and closing that chapter of the story.
+On the way back, we found the rock that had caused the damage to the Yaris and the source of the previous hours of anxiety. In a moment of poetic triumph, we tossed the rock back into the ocean, ending the threat to other unsuspecting drivers and closing that chapter of the story.
 
-Max had to take a work call at the Kleifabúi monument we stopped at earlier. We enjoyed our last sunset in Iceland, and my goodness that was one of the most gorgeous sunsets I've ever seen. 
+Max had to take a work call at the Kleifabúi monument we stopped at earlier. We enjoyed our last sunset in Iceland, and my goodness that was one of the most gorgeous sunsets I had ever seen. 
 
 ![Kleifabúi gazing at the sunset (📸: brandy)](/images/statue-sunset-iceland.jpg#large)
 
-We actually saw the Northern lights again, our second time after our initial viewing in Egilsstaðir out in the east. It was a brief wisp of aurora borealis but not any less magical.
+We actually saw the Northern lights again, our second time after the initial viewing in Egilsstaðir out in the east. It was a brief wisp of aurora borealis but not any less magical.
 
 ![Sliver of an aurora we spotted](/images/aurora-westfjords.jpg#large)
 
-The night drive back went from joyous to treacherous to hallucinatory. Max and I took turns driving while Brandon slept in the back. Although he's almost certainly indignant reading this. He did help on the drive there immensely. 
+The night drive back went from joyous to treacherous to hallucinatory. Max and I took turns driving while Brandon slept in the back. He's almost certainly indignant reading this — I concede he helped on the drive there immensely. 
 
-Max and I held the fort down, instantly slipping into comas each time we got off the wheel. By the time we were 10 minutes out from our accommodation, Max heaved a huge groan and said he had to get off. We were so tired that neither of us could hold out for an additional few miles without falling asleep. Brandon took the wheel and finished the job.
+Max and I held the fort down, instantly slipping into comas each time we traded places every hour. By the time we were 10 minutes out from our accommodation, Max heaved a huge groan and said he had to get off. We were so tired that neither of us could hold out for an additional few miles without falling asleep. Brandon took the wheel and finished the job.
 
 I don't mean it lightly when I say we almost died that day. From the car missing a piece, to the perilous route, to the fact we were about to fall asleep on top of all of that. The quest for puffins was one of the most dangerous things I've ever done.
 

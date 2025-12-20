@@ -55,7 +55,7 @@ function Blog() {
     }, []);
 
     return (
-        <div className="flex-grow bg-paper-base text-ink-black py-24">
+        <div className="flex-grow bg-paper-base text-ink-black pt-28 pb-8">
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8">
                 <div className="space-y-12">
                     {posts.map((post) => (

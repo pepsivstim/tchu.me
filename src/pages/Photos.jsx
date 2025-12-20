@@ -4,65 +4,105 @@ import sectionsOrder from '../content/photos/sections.json';
 
 // Component to handle individual image loading
 const ImageWithLoader = ({ photo, onClick }) => {
-    const [isLoading, setIsLoading] = useState(true);
-    const [isReady, setIsReady] = useState(false);
-    const imgRef = useRef(null);
+    const [visuals, setVisuals] = useState({ grayscale: 1, scale: 1 });
+    const containerRef = useRef(null);
+    const rafRef = useRef(null);
+    const isHoveredRef = useRef(false);
 
     useEffect(() => {
-        // Check immediately
-        const checkComplete = () => {
-            if (imgRef.current && imgRef.current.complete) {
-                setIsLoading(false);
-                setTimeout(() => setIsReady(true), 1000);
-                return true;
+        let isVisible = false;
+
+        const updateVisuals = () => {
+            if (!containerRef.current) return;
+
+            // If hovered, force max states immediately
+            if (isHoveredRef.current) {
+                setVisuals({ grayscale: 0, scale: 1.1 });
+                if (isVisible) {
+                    rafRef.current = requestAnimationFrame(updateVisuals);
+                }
+                return;
             }
-            return false;
+
+            const rect = containerRef.current.getBoundingClientRect();
+            const elementCenter = rect.top + rect.height / 2;
+            const viewportCenter = window.innerHeight / 2;
+            const distance = Math.abs(elementCenter - viewportCenter);
+
+            // 20% band means +/- 10% from center is the "safe zone"
+            const safeZoneRadius = window.innerHeight * 0.1;
+            // Gradient fades out over the next 400px
+            const fadeDistance = 400;
+
+            let progress = 1; // 1 = far/gray/small, 0 = close/color/big
+
+            if (distance <= safeZoneRadius) {
+                progress = 0;
+            } else {
+                progress = Math.min((distance - safeZoneRadius) / fadeDistance, 1);
+            }
+
+            setVisuals({
+                grayscale: progress,
+                scale: 1.0 + (1 - progress) * 0.01
+            });
+
+            if (isVisible) {
+                rafRef.current = requestAnimationFrame(updateVisuals);
+            }
         };
 
-        if (checkComplete()) return;
-
-        // Poll for completion to handle edge cases with lazy loading/cache
-        const intervalId = setInterval(() => {
-            if (checkComplete()) {
-                clearInterval(intervalId);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    rafRef.current = requestAnimationFrame(updateVisuals);
+                } else {
+                    if (rafRef.current) {
+                        cancelAnimationFrame(rafRef.current);
+                    }
+                }
+            },
+            {
+                rootMargin: '100px 0px 100px 0px', // Pre-load slightly before viewport
+                threshold: 0
             }
-        }, 200);
+        );
 
-        // Stop polling after 10 seconds to avoid infinite loops on broken images
-        setTimeout(() => clearInterval(intervalId), 10000);
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
 
-        return () => clearInterval(intervalId);
+        return () => {
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
+            if (rafRef.current) {
+                cancelAnimationFrame(rafRef.current);
+            }
+        };
     }, []);
 
     return (
         <div
+            ref={containerRef}
             onClick={() => onClick(photo)}
-            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 ease-in-out transform-gpu scale-100 hover:scale-[1.02] cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            onMouseEnter={() => { isHoveredRef.current = true; }}
+            onMouseLeave={() => { isHoveredRef.current = false; }}
+            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            style={{
+                transform: `scale(${visuals.scale})`,
+                transition: 'transform 75ms linear'
+            }}
         >
-            {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-8 h-8 border-2 border-ink-light/30 border-t-ink-black rounded-full animate-spin"></div>
-                </div>
-            )}
             <img
-                ref={imgRef}
                 src={photo.url}
                 alt={photo.caption || photo.name}
-                className={`w-full h-full object-cover grayscale hover:grayscale-0 block 
-                    ${isLoading ? 'opacity-0' : 'opacity-100'} 
-                    ${isReady
-                        ? 'transition-[filter] duration-[6000ms] ease-in-out hover:duration-300'
-                        : 'transition-opacity duration-500 ease-in-out'}`}
+                className="w-full h-full object-cover block transition-[filter] duration-75 ease-linear"
+                style={{ filter: `grayscale(${visuals.grayscale}) brightness(1)` }}
                 loading="lazy"
-                decoding="async"
-                onLoad={() => {
-                    setIsLoading(false);
-                    // Enable the slow hover transition only after initial load animation completes
-                    setTimeout(() => setIsReady(true), 1000);
-                }}
-                onError={() => setIsLoading(false)}
             />
-            {photo.caption && !isLoading && (
+            {photo.caption && (
                 <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <p className="text-xs md:text-sm font-sans font-medium text-ink-black tracking-wide">{photo.caption}</p>
                 </div>
@@ -131,7 +171,7 @@ function Photos() {
     }, []);
 
     return (
-        <div className="flex-grow bg-paper-base text-ink-black py-24">
+        <div className="flex-grow bg-paper-base text-ink-black pt-28 pb-8">
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8">
                 {Object.keys(sections).length !== 0 && (
                     <div className="space-y-16">
@@ -166,7 +206,7 @@ function Photos() {
                                 const sectionMeta = sectionsOrder.find(s => s.id === section);
                                 return (
                                     <div key={section}>
-                                        <h2 className="text-2xl font-serif font-bold mb-2 text-ink-black border-b border-paper-border pb-2 inline-block">
+                                        <h2 className="text-2xl font-serif font-bold mb-2 text-ink-black border-b border-paper-border inline-block">
                                             {section}
                                         </h2>
                                         {sectionMeta?.description && (
