@@ -34,8 +34,30 @@ const ThemeToggle = () => {
         return () => mediaQuery.removeEventListener('change', handleChange);
     }, [mode]);
 
+    // Logic to show/hide the toggle based on scroll position
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY === 0) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        // Check initial position
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 group">
+        <div
+            className={`fixed right-0 top-1/2 -translate-y-1/2 z-50 group transition-transform duration-500 ease-in-out ${isVisible ? 'translate-x-0' : 'translate-x-12' /* Slide out to the right */
+                }`}
+        >
             {/* The visible tab/hint - positioned on the Left of the drawer now */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-paper-base/90 backdrop-blur-sm border-y border-l border-paper-border rounded-l-md px-1.5 py-4 shadow-sm group-hover:opacity-0 transition-opacity duration-300">
                 <div className="w-1 h-8 bg-paper-border rounded-full" />
