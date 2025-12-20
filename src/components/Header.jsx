@@ -53,7 +53,7 @@ function Header() {
                         alt="Timothy Chu"
                         className="h-10 w-10 md:h-12 md:w-12 rounded-md object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-300 shrink-0"
                     />
-                    <span className="text-xl font-medium lg:text-2xl text-ink-black tracking-tight whitespace-nowrap">
+                    <span className="font-serif text-xl font-bold lg:text-2xl text-ink-black tracking-tight whitespace-nowrap">
                         tchu.me
                     </span>
                 </Link>

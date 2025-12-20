@@ -59,7 +59,7 @@ function Home() {
               </div>
             )}
             <Link to={`/blog/${latestPost.slug}`} className="block">
-              <h2 className="text-xl md:text-2xl text-ink-black font-serif mb-2 group-hover:text-ink-light transition-colors">
+              <h2 className="font-bold text-xl md:text-2xl text-ink-black font-serif mb-2 group-hover:text-ink-light transition-colors">
                 {latestPost.title}
               </h2>
               <p className="text-lg text-ink-light font-light leading-relaxed">
