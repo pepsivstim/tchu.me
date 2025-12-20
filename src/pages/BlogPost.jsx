@@ -62,14 +62,14 @@ function BlogPost() {
 
     return (
         <div className="flex-grow bg-paper-base text-ink-black pt-28 pb-8">
-            <article className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 prose prose-stone prose-lg md:prose-xl font-serif prose-h1:mb-4">
+            <article className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 prose prose-lg md:prose-xl font-serif prose-h1:mb-4">
                 <Link to="/blog" className="no-underline text-ink-light hover:text-ink-black mb-8 block transition-colors">
                     ← Back to all posts
                 </Link>
                 <div className="mb-8">
                     <h1 className="mb-0">{meta.title}</h1>
                     {meta.excerpt && (
-                        <p className="text-xl text-ink-light italic mb-4 pb-4 border-b border-paper-border w-full font-serif leading-relaxed opacity-80">{meta.excerpt}</p>
+                        <p className="text-xl text-ink-light italic mb-4 pb-4 border-b border-paper-border w-full font-serif leading-relaxed">{meta.excerpt}</p>
                     )}
                     <div className="text-ink-light font-mono text-sm">{meta.date}</div>
                 </div>
