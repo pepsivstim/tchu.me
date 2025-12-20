@@ -46,6 +46,9 @@ function BlogPost() {
                 }
 
                 if (foundPost) {
+                    if (foundPost.data.title) {
+                        document.title = `${foundPost.data.title} | tchu.me`;
+                    }
                     setContent(foundPost.markdownBody);
                     setMeta(foundPost.data);
                 } else {

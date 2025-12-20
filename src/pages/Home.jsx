@@ -10,6 +10,7 @@ function Home() {
   const [latestPost, setLatestPost] = useState(null);
 
   useEffect(() => {
+    document.title = 'tchu.me';
     const loadLatestPost = async () => {
       try {
         const modules = import.meta.glob('../content/posts/*.md', { query: '?raw', import: 'default' });
