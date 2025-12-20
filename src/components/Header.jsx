@@ -46,25 +46,25 @@ function Header() {
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 bg-paper-base transition-transform duration-300 ${isVisible || isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-            <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 py-3 lg:py-6 flex justify-between items-center relative border-b border-paper-border">
+            <div className="w-full max-w-4xl mx-auto px-6 md:px-12 lg:px-6 py-3 lg:py-6 flex justify-between items-center relative border-b border-paper-border">
                 <Link to="/" className="flex items-center gap-3 z-50 group" onClick={closeMenu}>
                     <img
                         src="/avatars/tim1.png"
                         alt="Timothy Chu"
-                        className="h-10 w-10 md:h-12 md:w-12 rounded-md object-cover grayscale group-hover:grayscale-0 transition duration-300 shrink-0"
+                        className="h-10 w-10 md:h-12 md:w-12 rounded-md object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-300 shrink-0"
                     />
-                    <span className="text-xl lg:text-2xl font-serif font-bold text-ink-black tracking-tight whitespace-nowrap">
+                    <span className="text-xl font-medium lg:text-2xl text-ink-black tracking-tight whitespace-nowrap">
                         tchu.me
                     </span>
                 </Link>
 
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex gap-8">
-                    <Link to="/blog" className={`${isActive('/blog') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} font-medium transition duration-300 relative group`}>
+                    <Link to="/blog" className={`${isActive('/blog') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} text-lg font-medium transition duration-300 relative group`}>
                         Blog
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-ink-black transition-all duration-300 ${isActive('/blog') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                     </Link>
-                    <Link to="/photos" className={`${isActive('/photos') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} font-medium transition duration-300 relative group`}>
+                    <Link to="/photos" className={`${isActive('/photos') ? 'text-ink-black' : 'text-ink-light hover:text-ink-black'} text-lg font-medium transition duration-300 relative group`}>
                         Photos
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-ink-black transition-all duration-300 ${isActive('/photos') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                     </Link>

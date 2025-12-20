@@ -4,65 +4,44 @@ import sectionsOrder from '../content/photos/sections.json';
 
 // Component to handle individual image loading
 const ImageWithLoader = ({ photo, onClick }) => {
-    const [isLoading, setIsLoading] = useState(true);
-    const [isReady, setIsReady] = useState(false);
-    const imgRef = useRef(null);
+    const [isInFocus, setIsInFocus] = useState(false);
+    const containerRef = useRef(null);
 
     useEffect(() => {
-        // Check immediately
-        const checkComplete = () => {
-            if (imgRef.current && imgRef.current.complete) {
-                setIsLoading(false);
-                setTimeout(() => setIsReady(true), 1000);
-                return true;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInFocus(entry.isIntersecting);
+            },
+            {
+                rootMargin: '-50% 0px -50% 0px', // Only trigger when intersecting the center line
+                threshold: 0
             }
-            return false;
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
         };
-
-        if (checkComplete()) return;
-
-        // Poll for completion to handle edge cases with lazy loading/cache
-        const intervalId = setInterval(() => {
-            if (checkComplete()) {
-                clearInterval(intervalId);
-            }
-        }, 200);
-
-        // Stop polling after 10 seconds to avoid infinite loops on broken images
-        setTimeout(() => clearInterval(intervalId), 10000);
-
-        return () => clearInterval(intervalId);
     }, []);
 
     return (
         <div
+            ref={containerRef}
             onClick={() => onClick(photo)}
-            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 ease-in-out transform-gpu scale-100 hover:scale-[1.02] cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 ease-in-out scale-100 hover:scale-[1.02] cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
         >
-            {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-8 h-8 border-2 border-ink-light/30 border-t-ink-black rounded-full animate-spin"></div>
-                </div>
-            )}
             <img
-                ref={imgRef}
                 src={photo.url}
                 alt={photo.caption || photo.name}
-                className={`w-full h-full object-cover grayscale hover:grayscale-0 block 
-                    ${isLoading ? 'opacity-0' : 'opacity-100'} 
-                    ${isReady
-                        ? 'transition-[filter] duration-[6000ms] ease-in-out hover:duration-300'
-                        : 'transition-opacity duration-500 ease-in-out'}`}
+                className={`w-full h-full object-cover block transition-[filter] duration-[750ms] ease-in-out ${isInFocus ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'}`}
                 loading="lazy"
-                decoding="async"
-                onLoad={() => {
-                    setIsLoading(false);
-                    // Enable the slow hover transition only after initial load animation completes
-                    setTimeout(() => setIsReady(true), 1000);
-                }}
-                onError={() => setIsLoading(false)}
             />
-            {photo.caption && !isLoading && (
+            {photo.caption && (
                 <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <p className="text-xs md:text-sm font-sans font-medium text-ink-black tracking-wide">{photo.caption}</p>
                 </div>
