@@ -8,7 +8,7 @@ In April 2024 I went to Iceland with two close friends. It was our 2nd to last f
 
 ## the gamble
 
-One of the places we wanted visit was the Látrabjarg cliffs at the far end of the Westfjords — one of the most remote regions of an already remote and largely rural country. The cliffs are known for their puffins.
+One of the places we wanted to visit was the Látrabjarg cliffs at the far end of the Westfjords — one of the most remote regions of an already remote and largely rural country. The cliffs are known for their puffins.
 
 ![The Westfjords is that jagged triangular peninsula in the Northwestern corner of Iceland](/images/westfjords.png#large)
 
@@ -35,7 +35,7 @@ So we departed our Airbnb in search of those puffins. We drove through the rolli
 
 ![Icelandic tundra](/images/iceland-tundra.jpg#large)
 
-As we approached the coast and the distant landscape revealed itself, we could see the rising fjords of the Westfjords across the grey water. It wasn't the majesty of the sprawling glaciers or the sublime volcanic landscape we had seen the past few days, but there was nonetheless a grounded beauty to their gentle slopes and snow coated tops.
+As we approached the coast and the distant landscape revealed itself, we could see the rising fjords of the Westfjords across the grey water. It wasn't the majesty of the thundering falls, sublime glaciers, and the sprawling volcanic landscape we had seen the past few days, but there was nonetheless a grounded beauty to their gentle slopes and snow coated tops.
 
 ![Gentle fjords](/images/iceland-grey-fjords.jpg#large)
 
