@@ -4,16 +4,67 @@ import sectionsOrder from '../content/photos/sections.json';
 
 // Component to handle individual image loading
 const ImageWithLoader = ({ photo, onClick }) => {
-    const [isInFocus, setIsInFocus] = useState(false);
+    const [visuals, setVisuals] = useState({ grayscale: 1, scale: 1 });
     const containerRef = useRef(null);
+    const rafRef = useRef(null);
+    const isHoveredRef = useRef(false);
 
     useEffect(() => {
+        let isVisible = false;
+
+        const updateVisuals = () => {
+            if (!containerRef.current) return;
+
+            // If hovered, force max states immediately
+            if (isHoveredRef.current) {
+                setVisuals({ grayscale: 0, scale: 1.1 });
+                if (isVisible) {
+                    rafRef.current = requestAnimationFrame(updateVisuals);
+                }
+                return;
+            }
+
+            const rect = containerRef.current.getBoundingClientRect();
+            const elementCenter = rect.top + rect.height / 2;
+            const viewportCenter = window.innerHeight / 2;
+            const distance = Math.abs(elementCenter - viewportCenter);
+
+            // 20% band means +/- 10% from center is the "safe zone"
+            const safeZoneRadius = window.innerHeight * 0.1;
+            // Gradient fades out over the next 400px
+            const fadeDistance = 400;
+
+            let progress = 1; // 1 = far/gray/small, 0 = close/color/big
+
+            if (distance <= safeZoneRadius) {
+                progress = 0;
+            } else {
+                progress = Math.min((distance - safeZoneRadius) / fadeDistance, 1);
+            }
+
+            setVisuals({
+                grayscale: progress,
+                scale: 1.0 + (1 - progress) * 0.01
+            });
+
+            if (isVisible) {
+                rafRef.current = requestAnimationFrame(updateVisuals);
+            }
+        };
+
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsInFocus(entry.isIntersecting);
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    rafRef.current = requestAnimationFrame(updateVisuals);
+                } else {
+                    if (rafRef.current) {
+                        cancelAnimationFrame(rafRef.current);
+                    }
+                }
             },
             {
-                rootMargin: '-50% 0px -50% 0px', // Only trigger when intersecting the center line
+                rootMargin: '100px 0px 100px 0px', // Pre-load slightly before viewport
                 threshold: 0
             }
         );
@@ -26,6 +77,9 @@ const ImageWithLoader = ({ photo, onClick }) => {
             if (containerRef.current) {
                 observer.unobserve(containerRef.current);
             }
+            if (rafRef.current) {
+                cancelAnimationFrame(rafRef.current);
+            }
         };
     }, []);
 
@@ -33,12 +87,19 @@ const ImageWithLoader = ({ photo, onClick }) => {
         <div
             ref={containerRef}
             onClick={() => onClick(photo)}
-            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-all duration-300 ease-in-out scale-100 hover:scale-[1.02] cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            onMouseEnter={() => { isHoveredRef.current = true; }}
+            onMouseLeave={() => { isHoveredRef.current = false; }}
+            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            style={{
+                transform: `scale(${visuals.scale})`,
+                transition: 'transform 75ms linear'
+            }}
         >
             <img
                 src={photo.url}
                 alt={photo.caption || photo.name}
-                className={`w-full h-full object-cover block transition-[filter] duration-[750ms] ease-in-out ${isInFocus ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'}`}
+                className="w-full h-full object-cover block transition-[filter] duration-75 ease-linear"
+                style={{ filter: `grayscale(${visuals.grayscale}) brightness(1)` }}
                 loading="lazy"
             />
             {photo.caption && (
