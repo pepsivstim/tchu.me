@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ThemeToggle = () => {
     // State to hold the user's preference: 'light', 'dark', or 'system'
     const [mode, setMode] = useState(localStorage.getItem('theme') || 'system');
+    const location = useLocation();
+
+    // Only show toggle on blog posts (e.g. /blog/some-post), not on the list (/blog) or other pages
+    const isBlogPost = location.pathname.startsWith('/blog/') && location.pathname !== '/blog';
 
     useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -53,6 +58,8 @@ const ThemeToggle = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    if (!isBlogPost) return null;
+
     return (
         <div
             className={`fixed right-0 top-1/2 -translate-y-1/2 z-50 group transition-transform duration-500 ease-in-out ${isVisible ? 'translate-x-0' : 'translate-x-12' /* Slide out to the right */
@@ -68,8 +75,8 @@ const ThemeToggle = () => {
                 <button
                     onClick={() => setMode('light')}
                     className={`p-2 rounded-md transition-all duration-200 ${mode === 'light'
-                            ? 'bg-ink-black text-paper-base shadow-sm'
-                            : 'text-ink-light hover:text-ink-black hover:bg-paper-border/50'
+                        ? 'bg-ink-black text-paper-base shadow-sm'
+                        : 'text-ink-light hover:text-ink-black hover:bg-paper-border/50'
                         }`}
                     aria-label="Light Mode"
                     title="Light Mode"
@@ -89,8 +96,8 @@ const ThemeToggle = () => {
                 <button
                     onClick={() => setMode('system')}
                     className={`p-2 rounded-md transition-all duration-200 ${mode === 'system'
-                            ? 'bg-ink-black text-paper-base shadow-sm'
-                            : 'text-ink-light hover:text-ink-black hover:bg-paper-border/50'
+                        ? 'bg-ink-black text-paper-base shadow-sm'
+                        : 'text-ink-light hover:text-ink-black hover:bg-paper-border/50'
                         }`}
                     aria-label="System Preference"
                     title="System Preference"
@@ -104,8 +111,8 @@ const ThemeToggle = () => {
                 <button
                     onClick={() => setMode('dark')}
                     className={`p-2 rounded-md transition-all duration-200 ${mode === 'dark'
-                            ? 'bg-ink-black text-paper-base shadow-sm'
-                            : 'text-ink-light hover:text-ink-black hover:bg-paper-border/50'
+                        ? 'bg-ink-black text-paper-base shadow-sm'
+                        : 'text-ink-light hover:text-ink-black hover:bg-paper-border/50'
                         }`}
                     aria-label="Dark Mode"
                     title="Dark Mode"
