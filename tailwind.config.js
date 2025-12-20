@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'paper-base': '#fdfbf7', // Warm off-white
-        'ink-black': '#1c1917', // Stone 900
-        'ink-light': '#57534e', // Stone 600
-        'paper-border': '#e7e5e4', // Stone 200
+        'paper-base': 'var(--color-paper-base)',
+        'paper-border': 'var(--color-paper-border)',
+        'ink-black': 'var(--color-ink-black)',
+        'ink-light': 'var(--color-ink-light)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -23,8 +23,8 @@ export default {
       }
     },
   },
+  darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography'),
   ],
 }
-
