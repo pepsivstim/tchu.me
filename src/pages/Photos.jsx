@@ -131,7 +131,7 @@ function Photos() {
     }, []);
 
     return (
-        <div className="flex-grow bg-paper-base text-ink-black py-24">
+        <div className="flex-grow bg-paper-base text-ink-black py-28">
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8">
                 {Object.keys(sections).length !== 0 && (
                     <div className="space-y-16">
@@ -166,7 +166,7 @@ function Photos() {
                                 const sectionMeta = sectionsOrder.find(s => s.id === section);
                                 return (
                                     <div key={section}>
-                                        <h2 className="text-2xl font-serif font-bold mb-2 text-ink-black border-b border-paper-border pb-2 inline-block">
+                                        <h2 className="text-2xl font-serif font-bold mb-2 text-ink-black border-b border-paper-border inline-block">
                                             {section}
                                         </h2>
                                         {sectionMeta?.description && (

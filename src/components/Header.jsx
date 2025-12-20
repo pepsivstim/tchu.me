@@ -47,8 +47,15 @@ function Header() {
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 bg-paper-base transition-transform duration-300 ${isVisible || isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 py-3 lg:py-6 flex justify-between items-center relative border-b border-paper-border">
-                <Link to="/" className="text-xl lg:text-2xl font-serif font-bold text-ink-black tracking-tight cursor-pointer z-50" onClick={closeMenu}>
-                    tchu.me
+                <Link to="/" className="flex items-center gap-3 z-50 group" onClick={closeMenu}>
+                    <img
+                        src="/avatars/tim1.png"
+                        alt="Timothy Chu"
+                        className="h-10 w-10 md:h-12 md:w-12 rounded-md object-cover grayscale group-hover:grayscale-0 transition duration-300 shrink-0"
+                    />
+                    <span className="text-xl lg:text-2xl font-serif font-bold text-ink-black tracking-tight whitespace-nowrap">
+                        tchu.me
+                    </span>
                 </Link>
 
                 {/* Desktop Navigation */}
