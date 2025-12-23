@@ -4,7 +4,7 @@ date: "2025-12-18"
 excerpt: "a tale of 3 friends finishing the job"
 image: "/images/puffin-max.jpg"
 ---
-In April 2024 I went to Iceland with two close friends. It was our 2nd to last full day circling Iceland's iconic Ring Road. We had a decision to make.
+In April 2024 I went to Iceland with two close friends. It was day six of seven circling Iceland's iconic Ring Road. 
 
 ## the gamble
 
@@ -71,7 +71,7 @@ I wish I had taken a picture of what we saw. A metal sheet at the bottom of the 
 
 At this point my unsettledness turned into internal panic. I had just torn open the underside of our car by driving over that rock. Now we could've been leaking fuel or oils or whatever. We were at least an hour away from the nearest town. Worst comes to worst, we'd have to try to call emergency services to pick us up in a place with no cellular service.
 
-Now in the grand scheme of things was this a threat to our lives? Probably not. But it sure felt like if some braking or steering fluid had leaked, we'd careen over the edge of a cliff we couldn't brake or steer away from. I didn't know how car internals worked or if that was a reasonable assumption given the visible damage. 
+Now in the grand scheme of things was this a threat to our lives? Maybe not. But it sure felt like if some braking or steering fluid had leaked, we'd careen over the edge of a cliff we couldn't brake or steer away from. I didn't know how car internals worked or if that was a reasonable assumption given the visible damage. 
 
 To have this happen on our second to last day with our goal almost in sight was a pathetic end. I didn't want whoever would come rescue us to give us a chiding about foolishly driving a city car to this remote region. Just more fuel for the stupid tourists narrative.
 
