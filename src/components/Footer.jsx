@@ -1,13 +1,57 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 
 function Footer() {
+    const iconsRef = useRef(null);
+    const [showFish, setShowFish] = useState(false);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            if (!iconsRef.current) return;
+
+            const rect = iconsRef.current.getBoundingClientRect();
+            const padding = 10; // Detection threshold
+
+            // Check if cursor is within the container + padding
+            const inX = e.clientX >= (rect.left - padding) && e.clientX <= (rect.right + padding);
+            const inY = e.clientY >= (rect.top - padding) && e.clientY <= (rect.bottom + padding);
+
+            setShowFish(inX && inY);
+        };
+
+        // Only add listener on devices that likely have a cursor (mouse)
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', handleMouseMove);
+        } else {
+            // keep it simple for mobile: could show on active touch, or remain hidden.
+            // keeping hidden aligns with "cursor" logic implies desktop easter egg.
+            document.addEventListener('mousemove', handleMouseMove);
+        }
+
+        return () => document.removeEventListener('mousemove', handleMouseMove);
+    }, []);
+
     return (
         <footer className="bg-paper-base text-ink-black pb-3 lg:pb-8 mt-auto">
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 flex flex-row justify-center min-[320px]:justify-between items-center gap-2 lg:gap-0 border-t border-paper-border pt-3 lg:pt-8">
                 <Link to="/" className="text-lg text-ink-light font-light hover:text-ink-black transition-colors">
                     © 2025 Timothy Chu
                 </Link>
-                <div className="hidden min-[320px]:flex gap-4 items-center">
+                <div ref={iconsRef} className="hidden min-[320px]:flex gap-4 items-center">
+                    <a
+                        href="https://www.jetpunk.com/users/pepsivstim"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center justify-center text-ink-light hover:text-ink-black transition-all duration-300 ${showFish ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                        aria-label="Fish"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            {/* Simple Outline: Flat Tail -> Body Top -> Nose -> Body Bottom -> Flat Tail */}
+                            <path d="M1 4 L6 8 C 9 1 20 1 23 12 C 20 23 9 23 6 16 L 1 20 Z" />
+                            {/* Eye */}
+                            <circle cx="18" cy="11" r="1.5" />
+                        </svg>
+                    </a>
                     <a href="https://www.linkedin.com/in/timchu2002/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-ink-light hover:text-ink-black transition-colors" aria-label="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
