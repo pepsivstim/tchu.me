@@ -102,9 +102,9 @@ We climbed a snow covered trail to the cliffs. Ahead of us was 100% open ocean, 
 
 ![📸: max](/images/latrabjarg-cliffs2.jpg#large)
 
-But our goal of seeing the puffins was elusive. We scanned the cliff faces, seeing countless white seagulls nested on the cliff face and soaring around; their endless squawks mixing with the drowning, restless wind. We kept looking for ages, all the while taking the pictures and video that was mandatory for finishing such a journey. More looking, but no puffins.
+But our goal of seeing the puffins was elusive. We scanned the cliff faces, seeing countless white seagulls nested on the cliff face and soaring around. We kept looking for ages, all the while taking the pictures and video that was mandatory for finishing such a journey. More looking, but no puffins.
 
-I was empty. In sort of defeatist, that's to be expected way. At some point that feeling became an almost resigned gratefulness. We had done so much on this trip. We climbed a glacier, saw *auroras*, went bathing in lagoons, and hiked a bunch of random mountains. We had done a lot, more than we could ask for, but not everything was meant to be.
+I was empty. In a sort of defeatist, that's to be expected way. At some point that feeling became an almost resigned gratefulness. We had done so much on this trip. We climbed a glacier, saw *auroras*, went bathing in lagoons, and hiked a bunch of random mountains. We had done a lot, more than we could ask for, but not everything was meant to be.
 
 Brandon was silent most of the time we were up there. He remarked a few times how disappointed and emotional he was. I secretly was too, but I thought it was no use hanging around miserable. We'd tried, and that's what mattered.
 
