@@ -115,7 +115,7 @@ function BlogPost() {
                                         onClick={() => setSelectedImage({ url: src, caption: props.alt })}
                                     />
                                     {props.alt && (
-                                        <figcaption className="text-center text-ink-light text-sm italic mt-2 font-serif opacity-80">
+                                        <figcaption className="text-center text-ink-light text-sm italic mt-2 font-serif">
                                             {props.alt}
                                         </figcaption>
                                     )}
@@ -131,32 +131,30 @@ function BlogPost() {
             {/* Lightbox Modal */}
             {selectedImage && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-paper-base/95 backdrop-blur-sm cursor-zoom-out"
+                    className="fixed inset-0 z-50 flex items-center justify-center p-8 md:p-12 bg-paper-base/95 backdrop-blur-sm cursor-zoom-out"
                     onClick={() => setSelectedImage(null)}
                 >
                     <div
-                        className="relative flex flex-col items-center justify-center max-w-7xl max-h-[90vh]"
-                        onClick={(e) => e.stopPropagation()}
+                        className="relative flex flex-col items-center justify-center max-w-7xl w-full max-h-full"
+                    // Removed stopPropagation here to allow clicks in empty spaces to close
                     >
                         <img
                             src={selectedImage.url}
                             alt={selectedImage.caption || ''}
-                            className="max-h-[85vh] w-auto object-contain shadow-2xl rounded-sm cursor-default"
+                            // Removing fixed max-h constraint and using flexbox to manage height
+                            // min-h-0 allows the image to shrink below its intrinsic size in a flex column
+                            className="w-auto h-auto min-h-0 object-contain shadow-2xl rounded-sm cursor-default"
+                            onClick={(e) => e.stopPropagation()} // Stop propagation on image
                         />
                         {selectedImage.caption && (
-                            <p className="mt-4 text-ink-light font-serif italic text-lg bg-paper-base/60 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/40 shadow-sm cursor-text tracking-wide opacity-90">
+                            <p
+                                className={`mt-4 text-ink-light font-serif italic text-lg bg-paper-base px-6 py-3 rounded-2xl border border-white/40 shadow-sm cursor-text tracking-wide ${selectedImage.caption.length > 200 ? 'max-h-[30vh] overflow-y-auto' : ''}`}
+                                style={selectedImage.caption.length > 200 ? { scrollbarWidth: 'thin' } : {}}
+                                onClick={(e) => e.stopPropagation()} // Stop propagation on caption
+                            >
                                 {selectedImage.caption}
                             </p>
                         )}
-                        <button
-                            onClick={() => setSelectedImage(null)}
-                            className="absolute -top-12 right-0 text-ink-black hover:text-ink-light transition-colors"
-                            aria-label="Close"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
                     </div>
                 </div>
             )}

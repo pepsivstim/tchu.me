@@ -1,7 +1,7 @@
 ---
 title: "The Japanese Halo"
 date: "2025-12-24"
-excerpt: "a personal examination of its appeal and unscientific speculation into why it exists"
+excerpt: "a personal examination and unscientific speculation of its appeal"
 image: "/images/your-name-stairs.jpg"
 ---
 You don't have to be chronically online to see Japan's [halo](https://en.wikipedia.org/wiki/Halo_effect) in our culture. Instagram seems to be chock full with pictures of post-grad Japan trips. Ramen and sushi have become all the rage among foodies looking for a perfect meal. You'd be hard pressed to find many Gen-Z who haven't watched the likes of Attack on Titan or Demon Slayer. The quip that simply adding the word *Japanese* to any normal picture's caption suddenly increases its perceived "aura" is real. 
@@ -36,7 +36,7 @@ As someone moved by complexity, scale, and trains, the Japanese rail system is p
 In the Tokyo metropolitan area alone, over 40 public and private rail operators transport 40 million people daily. The speed, orderliness, punctuality, scale, and efficiency required of the system to move one of the largest cities in the world is nothing short of a logistical and engineering marvel. The *single* 30 stop Yamanote line circling central Tokyo transports roughly 3 million people a day, more than five times the entire Washington DC metro.
 ![My Yamanote line model](/images/tokyo-criss-cross.png#small)
 
-Shinkansen (bullet train) lines criss-cross the country. It's considered *the* cost-effective and safe way to do medium-distance travel. In its 60+ years of operation not a single death has resulted from derailments or collisions. I took it myself both of my times in Japan. I remember checking my ticket's departure time, unsurprised every single one departed on time to the minute.
+Shinkansen (bullet train) lines criss-cross the country. It's considered *the* cost-effective and safe way to do medium-distance travel. In its 60+ years of operation not a single death has resulted from derailments or collisions. I took it myself both of my times in Japan. I remember checking my ticket's departure time each time, unsurprised every single train departed on time to the minute.
 
 In the US we have pride in our freedom to have the ability to drive anywhere in our cars. In Japan, freedom is in the convenience and efficiency of being able to get anywhere in the country *without* needing a car.
 ![Tokaido Shinkansen](/images/shinkansen-station.jpg#medium)
