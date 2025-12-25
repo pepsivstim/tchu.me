@@ -103,7 +103,7 @@ const ImageWithLoader = ({ photo, onClick }) => {
                 loading="lazy"
             />
             {photo.caption && (
-                <div className="absolute bottom-0 left-0 w-full bg-paper-base/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute bottom-0 left-0 w-full bg-paper-base p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <p className="text-xs md:text-sm font-sans font-medium text-ink-black tracking-wide">{photo.caption}</p>
                 </div>
             )}
@@ -229,32 +229,28 @@ function Photos() {
             {/* Lightbox Modal */}
             {selectedPhoto && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-paper-base/95 backdrop-blur-sm cursor-zoom-out"
+                    className="fixed inset-0 z-50 flex items-center justify-center p-8 md:p-12 bg-paper-base/95 backdrop-blur-sm cursor-zoom-out"
                     onClick={() => setSelectedPhoto(null)}
                 >
                     <div
-                        className="relative flex flex-col items-center justify-center max-w-7xl max-h-[90vh]"
-                        onClick={(e) => e.stopPropagation()}
+                        className="relative flex flex-col items-center justify-center max-w-7xl w-full max-h-full"
+                    // Removed stopPropagation here to allow clicks in empty spaces to close
                     >
                         <img
                             src={selectedPhoto.url}
                             alt={selectedPhoto.caption || selectedPhoto.name}
-                            className="max-h-[85vh] w-auto object-contain shadow-2xl rounded-sm cursor-default"
+                            className="w-auto h-auto min-h-0 object-contain shadow-2xl rounded-sm cursor-default"
+                            onClick={(e) => e.stopPropagation()} // Stop propagation on image
                         />
                         {selectedPhoto.caption && (
-                            <p className="mt-4 text-ink-black font-sans font-medium text-lg bg-paper-base/60 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/40 shadow-sm cursor-text tracking-wide">
+                            <p
+                                className={`mt-4 text-ink-black font-sans font-medium text-lg bg-paper-base px-6 py-3 rounded-2xl border border-white/40 shadow-sm cursor-text tracking-wide ${selectedPhoto.caption.length > 200 ? 'max-h-[30vh] overflow-y-auto' : ''}`}
+                                style={selectedPhoto.caption.length > 200 ? { scrollbarWidth: 'thin' } : {}}
+                                onClick={(e) => e.stopPropagation()} // Stop propagation on caption
+                            >
                                 {selectedPhoto.caption}
                             </p>
                         )}
-                        <button
-                            onClick={() => setSelectedPhoto(null)}
-                            className="absolute -top-12 right-0 text-ink-black hover:text-ink-light transition-colors"
-                            aria-label="Close"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
                     </div>
                 </div>
             )}
