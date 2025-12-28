@@ -36,9 +36,9 @@ As someone moved by complexity, scale, and trains, the Japanese rail system is p
 In the Tokyo metropolitan area alone, over 40 public and private rail operators transport 40 million people daily. The speed, orderliness, punctuality, scale, and efficiency required of the system to move one of the largest cities in the world is nothing short of a logistical and engineering marvel. The *single* 30 stop Yamanote line circling central Tokyo transports roughly 3 million people a day, more than five times the entire Washington DC metro.
 ![My Yamanote line model](/images/tokyo-criss-cross.png#small)
 
-Shinkansen (bullet train) lines criss-cross the country. It's considered *the* cost-effective and safe way to do medium-distance travel. In its 60+ years of operation not a single death has resulted from derailments or collisions. I took it myself both of my times in Japan. I remember checking my ticket's departure time each time, unsurprised every single train departed on time to the minute.
+Shinkansen (bullet train) lines criss-cross the country. It's considered *the* cost-effective and safe way to do medium-distance travel. In its 60+ years of operation not a single death has resulted from derailments or collisions. I took it myself both of my times in Japan. I remember checking my ticket's departure time each time my train departed, unsurprised every single one left on time to the minute.
 
-In the US we have pride in our freedom to have the ability to drive anywhere in our cars. In Japan, freedom is in the convenience and efficiency of being able to get anywhere in the country *without* needing a car.
+In the US we have pride in our freedom to drive anywhere in our cars. In Japan, freedom is in the convenience and efficiency of being able to get anywhere *without* needing a car.
 ![Tokaido Shinkansen](/images/shinkansen-station.jpg#medium)
 
 #### everyday politeness
@@ -49,13 +49,13 @@ Japan is lauded for its politeness and respect. It's wired into the culture and 
 You are treated with politeness even by somewhere as plain as a McDonalds. The effort Japanese people put into lower-wage work — the kind of jobs we in the US would say "don't get paid enough to care", is remarkable.
 
 #### respect for food
-Never mind my foray into an American fast food joint in Japan of all places. The Japanese are some of the most long-lived people in the world, and their diet and attitude towards food is part of the reason. 
+Never mind my foray into an American fast food joint in Japan of all places. The Japanese are some of the most long-lived people in the world. Their diet and attitude towards food are part of the reason. 
 
 One cold afternoon in Sapporo, Hokkaido a couple friends and I were getting hungry and specifically wanted udon. A quick search on Google Maps led to a run of the mill office building. Making our way through the little maze of a basement we stumbled across the inconspicuous udon restaurant. 
 
 After we ordered on the ticket machine and seated, we handed our tickets to the server. Within 5 minutes our food was served. I got a set of hot udon and steaming curry rice served with a salad and pickled vegetables on the side. We happily ate our entire meal, showing due respect by cleaning every last bit. As we left the chef gave us a big customary thank you. Even after all of the meals I was still mildly surprised such a hole in the wall place could create such a good experience.
 
-This might be the halo in full swing but there's a certain respect for food and its presentation. It's a combination of the sleekness of the dining spaces, the interactive ticket machines, and a general standard that any restaurant you go into will have good service and decent food.
+This might be the halo in full swing but there's a certain respect for food and its presentation. It's a combination of the sleekness of the dining spaces, the interactive ticket machines, and the atmosphere around dining and cooking. There's a general standard that any restaurant you go into will have good service and decent food.
 
 ![Delightful meal at a highway rest stop in Innoshima, Hiroshima](/images/shimanami-kaido-food.png#medium)
 
@@ -63,7 +63,7 @@ This might be the halo in full swing but there's a certain respect for food and 
 On my solo travel through Hiroshima in January 2025, I lived in numerous accommodations, most of which were pretty hole in the wall hostels or random rural inns. They all had one thing in common: every single one was *spotless*.
 
 ![My accomodation in Omishima, Imabari](/images/omishima-airbnb.png#medium)
-Showers seemed shiny new, completely free of even a speck of mold. Common areas were neatly stacked with towels, water jugs, combs, and anything else you could need. There is a level of effort put into cleanliness and comfort I haven't spotted at the same level anywhere else I've been.
+Showers seemed shiny new, completely free of even a speck of mold. Common areas were neatly stocked with towels, water jugs, combs, and anything else you could need. There is a level of effort put into cleanliness and comfort I haven't spotted at the same level anywhere else I've been.
 
 As I remarked in a journal entry:
 
