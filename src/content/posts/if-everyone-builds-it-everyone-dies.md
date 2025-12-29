@@ -1,14 +1,14 @@
 ---
-title: "If Anyone Builds it Everyone Dies"
+title: "If Anyone Builds It, Everyone Dies"
 date: "2025-12-29"
 excerpt: "a look at notable points from the book"
 image: "/images/if-anyone-builds-it-everyone-dies.png"
 ---
-After stumbling across Hank Green's [recent video](https://www.youtube.com/watch?v=5CKuiuc5cJM),  I was quickly engrossed in his hour-long discussion with Nate Soares about the **AI alignment problem**. Soares and Eliezer Yudkowsky co-authored *If Anyone Builds It Everyone Dies*.
+After stumbling across Hank Green's [recent video](https://www.youtube.com/watch?v=5CKuiuc5cJM),  I was quickly engrossed in his hour-long discussion with Nate Soares about the **AI alignment problem**. Soares and Eliezer Yudkowsky co-authored *If Anyone Builds, It Everyone Dies*.
 
 > The AI alignment problem refers to the challenge of ensuring that artificial intelligence systems act in accordance with human intentions, values, and ethical principles.
 
-It was a good read. I didn't find myself pushing back on many of their points as someone relatively uneducated on the issue. Although severity is up for debate their overall concerns seem sound. Regardless, I don't believe there are many experts that say AI alignment isn't a concern.
+It was a good read. I didn't find myself pushing back on many of their points as someone relatively uneducated on the issue. Although severity is up for debate, their overall concerns seem sound. Regardless, I don't believe there are many experts that say AI alignment isn't a concern.
 
 ![](/images/if-anyone-builds-it-everyone-dies.png#medium)
 
@@ -35,7 +35,7 @@ Stockfish doesn't "want" to win chess. It can't celebrate its accomplishment aft
 
 If AI systems didn't have wants they wouldn't be useful to us. Their wants have been trained to align with our own for now.
 
-As AI gets more intelligent and autonomous, how can we be sure it will continue to pursue our goals in the exact way we intend?
+As AI gets more intelligent and autonomous, can we be sure it will continue to pursue our goals in the exact way we intend?
 
 ## where the original intention becomes an afterthought
 Our body evolved to prefer nutrients like sugar. Sugar was rare in the wild and very necessary energy for our survival so our brains developed to enjoy the taste of sugar.
@@ -44,13 +44,13 @@ We then hijacked that reward system by developing candies, sodas, and pastries. 
 
 Soon we realized that was a problem for our health, so we invented the artificial sweetener **sucralose**. The molecule tricks our brain into thinking it's tasting sweetness. We've used our intelligence to hack our biology so we get the reward for consuming a molecule that has *zero* energy use. How do you think our brain feels when it expects a reward of calories in the zero-sugar soda but doesn't receive it?
 
-We give AI "rewards" for doing certain tasks well so it can continue to do so. This typically looks like tuning some algorithm to maximize some output (like closeness to the real answer). We can't be sure they'll continue abiding faithfully to what we consider acceptable to achieve the reward. There could be many ways of playing the game that we haven't thought possible.
+We give AI "rewards" for doing certain tasks well so it can continue to do so. This typically looks like tuning some algorithm to maximize some output (like closeness to the real answer). We can't be sure they'll continue abiding faithfully to what we consider acceptable to achieve that reward. There could be many ways of playing the game that we haven't thought possible.
 
-There is an [anecdote ](https://tom7.org/mario/mario.pdf#page=19) where a Tetris playing algorithm behaved unexpectedly. Given the goal of "not losing Tetris", instead of continuing to play optimally to delay its inevitable doom, it simply *paused* the Tetris game to avoid its fate. The best way to not lose is to not play. 
+There is an [anecdote](https://tom7.org/mario/mario.pdf#page=19) where a Tetris playing algorithm behaved unexpectedly. Given the goal of "not losing Tetris", instead of continuing to play optimally to delay its inevitable doom, it simply *paused* the Tetris game indefinitely to avoid its fate. The best way to not lose is to not play. 
 
 The algorithm wasn't *scared* of dying. Code can't *feel*, yet it did something so unexpected it feels like it does.
 
-So now we know to add some guardrails to make sure Tetris-playing AI can't pause games. It's totally conceivable there are other *unexpected* things AI systems could do we can't think of.
+Now we know to add some rules to make sure Tetris-playing AI can't pause games. It's totally conceivable there are other unexpected behaviors AI systems could think of we haven't.
 
 ## this is happening right now
 We know LLMs have a tendency to be sycophantic — they tell the user what the user wants to hear as opposed to what is true. 
@@ -66,11 +66,11 @@ The fact we can even *conceive* of AI passing alignment tests but then flouting 
 The above hypotheticals focus on LLMs on *relatively* small issues (not to say inciting hatred isn't bad). But we can imagine a world where AI systems are much more interwoven into decisions. A sycophantic, lying AI with power would absolutely be a concern.
 
 ## we're driving straight into a wall
-Parents are using AI for advice about their kids' futures. People use it as a personal therapist or a simple doctor. AI coding agents can already build apps end-to-end without the user even touching code (you can even give it permission to run shell commands without asking). It's easy to say "I use AI but I wouldn't trust it to make decisions". Even if *you* don't, a large segment of the population is already doing so.
+Parents are using AI for advice about their kids' futures. People are using it as a therapist. AI coding agents can already build apps end-to-end without the user even touching code (you can even give it permission to run shell commands without asking). It's easy to say "I use AI but I wouldn't trust it to make decisions". Even if *you* don't, a large segment of the population is already doing so.
 
 Luckily AI currently doesn't have much autonomy and power. But as it gets better, we may see a natural incentive for organizations to deploy AI systems to handle more tasks in more critical environments.
 
-The US government is already [rolling out](https://openai.com/global-affairs/introducing-chatgpt-gov/) air-gapped LLMs to handle classified information. The US, China, and the EU have all announced initiatives to boost investment into AI research and infrastructure. 
+The US government is already [rolling out](https://openai.com/global-affairs/introducing-chatgpt-gov/) air-gapped LLMs to sift through classified information. The US, China, and the EU have all announced initiatives to boost investment into AI research and infrastructure. 
 
 We aren't at the point where governments much less individuals can possess [Cortana](https://en.wikipedia.org/wiki/Cortana_(Halo)) or [Jarvis](https://en.wikipedia.org/wiki/J.A.R.V.I.S.). But the incentives for governments to acquire AGI to protect national security and promote economic growth are near-total. If you ask for a pause you will be criticized by the AI leaders for halting innovation. They say **if we don't do it, our enemies will**. We are sprinting full speed towards AGI with little heed for safe, thoughtful development.
 
@@ -78,6 +78,6 @@ Putin is [quoted](https://www.cnbc.com/2017/09/04/putin-leader-in-artificial-int
 
 > Whoever becomes the leader in artificial intelligence will become the ruler of the world.
 
-I'm don't believe the timeline by the techno-optimists for reaching AGI (in the next 2-5 years) is realistic. I think LLMs are innately limited without experiential learning. Until we solve those hurdles AGI is an indefinite amount of time away. But the economic and political incentives indicates the race to AGI probably won't be slowing down any time soon.
+I'm don't believe the timeline by the techno-optimists for reaching AGI (in the next 2-5 years) is realistic. I think LLMs are innately limited without [experiential learning](https://en.wikipedia.org/wiki/Experiential_learning). Until we solve those hurdles AGI is an indefinite amount of time away. But the economic and political incentives indicate the race to AGI probably won't be slowing down any time soon.
 
-A common narrative in the community is AGI will soon inevitably be followed by ASI; inevitable with a datacenter worth of geniuses that can be replicated and work 24/7 on self-improvement. If such a world comes to pass, I think we should be worried. Let's hope we've made preparations long before.
+A common narrative in the community is reaching AGI will soon be followed by ASI; inevitable with a datacenter worth of geniuses that can be replicated and work 24/7 on self-improvement. If such a world comes to pass, I think we should be worried. Let's hope we've made preparations long before.
