@@ -1,7 +1,7 @@
 ---
 title: "If Anyone Builds it Everyone Dies"
-date: "2025-12-27"
-excerpt: "a condensed look at notable points from the book"
+date: "2025-12-29"
+excerpt: "a look at notable points from the book"
 image: "/images/if-anyone-builds-it-everyone-dies.png"
 ---
 After stumbling across Hank Green's [recent video](https://www.youtube.com/watch?v=5CKuiuc5cJM),  I was quickly engrossed in his hour-long discussion with Nate Soares about the **AI alignment problem**. Soares and Eliezer Yudkowsky co-authored *If Anyone Builds It Everyone Dies*.
@@ -13,7 +13,7 @@ It was a good read. I didn't find myself pushing back on many of their points as
 ![](/images/if-anyone-builds-it-everyone-dies.png#medium)
 
 ## It isn't Terminator
-My previous impression of AI alignment was an effort to prevent some Terminator-esque situation. The Terminator narrative is that artificial superintelligence (ASI) would become so intelligent it would suddenly gain consciousness, feel hatred towards its creators, and seek to exterminate those who brought it into existence. It seemed a bit far-fetched, at least in my lifetime. 
+My previous impression of AI alignment was an effort to prevent some Terminator-esque situation. The Terminator narrative is that artificial superintelligence ([ASI](https://en.wikipedia.org/wiki/Superintelligence)) would become so intelligent it would suddenly gain consciousness, feel hatred towards its creators, and seek to exterminate those who brought it into existence. It seemed a bit far-fetched, at least in my lifetime. 
 
 The danger posited by the book is that ASI won't be malignant but *indifferent* to our wellbeing. Given its superintelligent nature, its indifference will be a hazard to human survival. What it wants will seem *alien* to us. 
 
@@ -72,10 +72,12 @@ Luckily AI currently doesn't have much autonomy and power. But as it gets better
 
 The US government is already [rolling out](https://openai.com/global-affairs/introducing-chatgpt-gov/) air-gapped LLMs to handle classified information. The US, China, and the EU have all announced initiatives to boost investment into AI research and infrastructure. 
 
-We aren't at the point where the governments much less individuals can possess [Cortana](https://en.wikipedia.org/wiki/Cortana_(Halo)) or [Jarvis](https://en.wikipedia.org/wiki/J.A.R.V.I.S.). But the incentives for governments to acquire [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) to protect national security and promote economic growth are near-total. If you ask for a pause you will be criticized by the AI leaders for halting innovation. They say **if we don't do it, our enemies will**. We are sprinting full speed towards AGI with little heed for safe, thoughtful development.
+We aren't at the point where governments much less individuals can possess [Cortana](https://en.wikipedia.org/wiki/Cortana_(Halo)) or [Jarvis](https://en.wikipedia.org/wiki/J.A.R.V.I.S.). But the incentives for governments to acquire AGI to protect national security and promote economic growth are near-total. If you ask for a pause you will be criticized by the AI leaders for halting innovation. They say **if we don't do it, our enemies will**. We are sprinting full speed towards AGI with little heed for safe, thoughtful development.
 
 Putin is [quoted](https://www.cnbc.com/2017/09/04/putin-leader-in-artificial-intelligence-will-rule-world.html?utm_source=chatgpt.com) saying:
 
 > Whoever becomes the leader in artificial intelligence will become the ruler of the world.
 
-I'm not sure if the timeline by the techno-optimists for AGI (next 2-5 years) is realistic. I don't think so. I think LLMs are innately limited without experiential learning. But the economic and political incentives indicates the race to AGI probably won't be slowing down any time soon. 
+I'm don't believe the timeline by the techno-optimists for reaching AGI (in the next 2-5 years) is realistic. I think LLMs are innately limited without experiential learning. Until we solve those hurdles AGI is an indefinite amount of time away. But the economic and political incentives indicates the race to AGI probably won't be slowing down any time soon.
+
+A common narrative in the community is AGI will soon inevitably be followed by ASI; inevitable with a datacenter worth of geniuses that can be replicated and work 24/7 on self-improvement. If such a world comes to pass, I think we should be worried. Let's hope we've made preparations long before.
