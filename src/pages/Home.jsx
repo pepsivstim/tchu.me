@@ -54,11 +54,11 @@ function Home() {
   return (
     <div className="flex-grow flex items-center justify-center px-6 md:px-16 lg:px-8 pt-28 pb-8 bg-paper-base text-ink-black min-h-[calc(100vh-theme(spacing.28))]">
 
-      <div className="w-full max-w-3xl flex items-center justify-center gap-2 md:gap-4">
+      <div className="w-full max-w-3xl flex items-center justify-center gap-2 md:gap-4 group">
         {/* Left Chevron */}
         <button
           onClick={prevPost}
-          className="p-2 text-ink-light opacity-40 hover:opacity-100 hover:text-ink-black transition md:p-4 focus:outline-none shrink-0"
+          className="p-2 text-ink-light opacity-0 group-hover:opacity-40 hover:!opacity-100 hover:text-ink-black transition duration-300 md:p-4 focus:outline-none shrink-0"
           aria-label="Previous post"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10">
@@ -69,20 +69,20 @@ function Home() {
         {/* Content Container - Minimalist Typography */}
         <div className="text-center w-full z-10">
           {currentPost ? (
-            <div className="mb-8 group">
+            <div className="mb-8">
               {currentPost.image && (
                 <div className="flex justify-center w-full mb-6 max-w-[300px] mx-auto">
                   <Link to={`/blog/${currentPost.slug}`} className="block w-full">
                     <img
                       src={currentPost.image}
                       alt={currentPost.title}
-                      className="w-full aspect-square object-cover rounded-md shadow-sm transition-transform duration-500 group-hover:scale-[1.01]"
+                      className="w-full aspect-square object-cover rounded-md shadow-sm transition-transform duration-500 hover:scale-[1.01]"
                     />
                   </Link>
                 </div>
               )}
               <Link to={`/blog/${currentPost.slug}`} className="block">
-                <h2 className="font-bold text-xl md:text-2xl text-ink-black font-serif mb-2 group-hover:text-ink-light transition-colors">
+                <h2 className="font-bold text-xl md:text-2xl text-ink-black font-serif mb-2 hover:text-ink-light transition-colors">
                   {currentPost.title}
                 </h2>
                 <p className="text-lg text-ink-light font-light leading-relaxed">
@@ -96,7 +96,7 @@ function Home() {
         {/* Right Chevron */}
         <button
           onClick={nextPost}
-          className="p-2 text-ink-light opacity-40 hover:opacity-100 hover:text-ink-black transition md:p-4 focus:outline-none shrink-0"
+          className="p-2 text-ink-light opacity-0 group-hover:opacity-40 hover:!opacity-100 hover:text-ink-black transition duration-300 md:p-4 focus:outline-none shrink-0"
           aria-label="Next post"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10">
