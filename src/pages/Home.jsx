@@ -58,7 +58,7 @@ function Home() {
         {/* Left Chevron */}
         <button
           onClick={prevPost}
-          className="p-2 text-ink-light opacity-0 group-hover:opacity-40 hover:!opacity-100 hover:text-ink-black transition duration-300 md:p-4 focus:outline-none shrink-0"
+          className="hidden md:block p-2 text-ink-light opacity-0 group-hover:opacity-40 hover:!opacity-100 hover:text-ink-black transition duration-300 md:p-4 focus:outline-none shrink-0"
           aria-label="Previous post"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10">
@@ -96,7 +96,7 @@ function Home() {
         {/* Right Chevron */}
         <button
           onClick={nextPost}
-          className="p-2 text-ink-light opacity-0 group-hover:opacity-40 hover:!opacity-100 hover:text-ink-black transition duration-300 md:p-4 focus:outline-none shrink-0"
+          className="hidden md:block p-2 text-ink-light opacity-0 group-hover:opacity-40 hover:!opacity-100 hover:text-ink-black transition duration-300 md:p-4 focus:outline-none shrink-0"
           aria-label="Next post"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10">
