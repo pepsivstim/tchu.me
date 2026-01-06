@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
 import { Buffer } from 'buffer';
 import { slugify } from '../utils/slugify';
+import rehypeRaw from 'rehype-raw';
 
 window.Buffer = window.Buffer || Buffer;
 
@@ -77,9 +78,16 @@ function BlogPost() {
                     <div className="text-ink-light font-mono text-sm">{meta.date}</div>
                 </div>
                 <ReactMarkdown
+                    rehypePlugins={[rehypeRaw]}
                     components={{
                         a: ({ node, ...props }) => (
                             <a {...props} target="_blank" rel="noopener noreferrer" />
+                        ),
+                        details: ({ node, ...props }) => (
+                            <details {...props} className="my-6 p-4 bg-paper-base/50 rounded-lg border border-paper-border/60 transition-colors shadow-sm" />
+                        ),
+                        summary: ({ node, ...props }) => (
+                            <summary {...props} className="cursor-pointer font-serif font-bold text-ink-black marker:text-ink-light outline-none select-none hover:text-ink-light transition-colors" />
                         ),
                         img: ({ node, ...props }) => {
                             let src = props.src;

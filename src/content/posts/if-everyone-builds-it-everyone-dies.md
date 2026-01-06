@@ -4,7 +4,7 @@ date: "2025-12-29"
 excerpt: "a look at notable points from the book"
 image: "/images/if-anyone-builds-it-everyone-dies.png"
 ---
-After stumbling across Hank Green's [recent video](https://www.youtube.com/watch?v=5CKuiuc5cJM),  I was quickly engrossed in his hour-long discussion with Nate Soares about the **AI alignment problem**. Soares and Eliezer Yudkowsky co-authored *If Anyone Builds, It Everyone Dies*.
+After stumbling across Hank Green's [recent video](https://www.youtube.com/watch?v=5CKuiuc5cJM),  I was quickly engrossed in his hour-long discussion with Nate Soares about the **AI alignment problem**. Soares and Eliezer Yudkowsky co-authored *If Anyone Builds It, Everyone Dies*.
 
 > The AI alignment problem refers to the challenge of ensuring that artificial intelligence systems act in accordance with human intentions, values, and ethical principles.
 
@@ -17,7 +17,7 @@ My previous impression of AI alignment was an effort to prevent some Terminator-
 
 The danger posited by the book is that ASI won't be malignant but *indifferent* to our wellbeing. Given its superintelligent nature, its indifference will be a hazard to human survival. What it wants will seem *alien* to us. 
 
-I initially struggled to see how an AI could have wants. But want doesn't necessarily mean AI will be conscious.
+I initially struggled to see how an AI could have wants. But having wants doesn't necessarily mean AI will be conscious.
 
 ## stockfish doesn't feel its wins yet it pursues winning ruthlessly
 
