@@ -7,7 +7,6 @@ image: "/images/puffin-max.jpg"
 In April 2024 I went to Iceland with two close friends. It was day six of seven circling Iceland's iconic Ring Road. 
 
 ## the gamble
-
 One of the places we wanted to visit was the Látrabjarg cliffs at the far end of the Westfjords — one of the most remote regions of an already remote and largely rural country. The cliffs are known for their puffins.
 
 ![The Westfjords is that jagged triangular peninsula in the Northwestern corner of Iceland](/images/westfjords.png#large)
@@ -41,7 +40,7 @@ As we approached the coast and the distant landscape revealed itself, we could s
 
 We stopped to get some food at a supermarket in a town called Búðardalur 1/3 of the drive in. It was a nice break where we could appreciate the bay views and reflect how far we'd come.
 
-As we continued driving lane markings became infrequent. Road would occasionally turn to gravel then back to road. Towns were few and far between. Even other cars were a rare sight. We were beginning to feel the inhospitality of the Westfjords.
+As we continued driving, lane markings became infrequent. Road would occasionally turn to gravel then back to road. Towns were few and far between. Even other cars were a rare sight. We were beginning to feel the inhospitality of the Westfjords.
 
 We stopped at many sites and overlooks along the way:
 
@@ -94,7 +93,7 @@ The drive forward kept on getting more and more majestic. It was well into the a
 
 At some point the metallic scraping sound disappeared. On inspection the metal had bent SO far back it now cleared the ground itself. The absurdity and resolution of the scraping noise was motivation to keep going.
 
-We finally reached the cliffs to see a single other car at the parking lot. That wasn't surprising given how late in the day (6 pm) it was and it was still early season for tourism and puffins.
+We finally reached the cliffs to see a single other car at the parking lot. That wasn't surprising given how late in the day (6 pm) it was and it being early season for tourism and puffins.
 
 ![](/images/latrabjarg-cliffs.jpg#large)
 
