@@ -4,6 +4,7 @@ date: "2026-01-06"
 excerpt: "reminiscing on a Danish deer park"
 image: "/images/hermitage-tree.jpg"
 ---
+> The sky was painted blue from floor to ceiling as if God had swept hi
 > The sky was painted blue from floor to ceiling as if God had swept his brush in a heavenly arc. The clouds were right there — as if a quick leap could propel me into the puffy mist.
 
 A few miles north of Copenhagen sits Jægersborg Dyrehave, otherwise known as *Dyrehaven* ("The Deer Park"). Founded in the 17th century as a royal hunting ground by Christian V of Denmark, it's a four square mile patch of managed nature preserve for the public and titular animals to enjoy.
@@ -41,7 +42,7 @@ But those cold winter months were entirely worth the sunny, warm weather that fo
 ![I didn't know deer could come in so many colors](/images/dyrehaven-deer.png#medium)
 
 ## shelter in a storm of light
-Close to midnight on May 10th 2024, my friend across the sea in Lund, Sweden texted me there was a decent chance of seeing aurora that night. I dismissed this as unlikely, especially in not-north-enough Denmark. A few hours later when he told me to check for real things started looking up.
+Close to midnight on May 10th 2024, my friend across the sea in Lund, Sweden texted me there was a decent chance of seeing aurora that night. I dismissed this as unlikely, especially in not-north-enough Denmark. A few hours later when he told me to check for real, things started looking up.
 
 > holy shit ive never seen [noaa](https://www.spaceweather.gov/communities/aurora-dashboard-experimental) go red
 
@@ -53,26 +54,24 @@ Then the group chat for my apartment started buzzing with a few students saying 
 
 I wasn't expecting too much. I had already checked off my bucket list item of aurora spotting in Iceland. I didn't think anything could beat that.
 
-As I cycled on the path to the Hermitage, a faint, now naked eye visible glow began to blanket the sky. By the time I reached the top of the hill overlooking the water, it had become a shimmering cloud of green and violet. 
+As I cycled on the path to the Hermitage, a faint, now visible glow began to blanket the sky. By the time I reached the top of the hill overlooking the water, it had become a shimmering cloud of green and violet. 
 
 ![](/images/hermitage-aurora.jpg#medium)
 
 I made my way down to my usual spot off the coast. By then the solar storm was raining in a blazing fury. Those spindly rays of light shimmered in a slow, fleeting dance. Colors I didn't even know could occur in nature shined in the night.
 
-Rays of light that initially seemed in the distance then started appearing directly overhead. It's like the 
-
 ![](/images/oresund-aurora.jpg#medium)
  
- I spent the next hour wandering around wholly unlit Dyrehaven, craning my neck towards the sky. I got on a call with the Lund friend seeing the exact same across the sea, and we marveled together at the dazzling display of nature. It was completely unlike what we had seen in Iceland. 
+ I spent the next hour wandering around wholly unlit Dyrehaven, craning my neck towards the sky. I got on a call with the Lund friend seeing the exact same show across the sea, and we marveled together at the dazzling display of nature. It was completely unlike what we had seen in Iceland. 
  
 ![high energy collisions in the upper atmosphere](/images/dyrehaven-aurora.jpg#medium)
 
-As I sat alone in the dark meadow, a herd of deer approached me — the curious ones getting as close as feet away. I wonder if any of them knew what *aurora borealis* was.
+As I sat alone and dead still in the dark meadow, a herd of deer approached me — the curious ones getting as close as feet away. I wonder if any of them knew what *aurora borealis* was.
 
 ## an unsuspecting friendship
 Of the many of places I could've studied abroad I chose a small Nordic country. Then I signed up for a marathon and chose to live in Kongens Lyngby. 
 
-Through this perfect storm I got to spend countless hours exploring Dyrehaven's many forests and grassy fields. I got to gaze at the dreamy, limitless sky and marvel at the expanse of the Øresund. Who would've thought a nature park in a suburb of Copenhagen could grow to be so special. 
+Through this perfect storm I got to spend countless hours exploring Dyrehaven's many forests and grassy fields. I got to gaze at the boundless sky and marvel at the expanse of the Øresund. Who would've thought a nature park in a suburb of Copenhagen could grow to be so special. 
 
 I don't know when I'll be back in Denmark, but when I am, I'll be sure to pay Dyrehaven a visit.
 
