@@ -4,7 +4,7 @@ date: "2026-01-06"
 excerpt: "reminiscing on a Danish deer park"
 image: "/images/hermitage-tree.jpg"
 ---
-> The sky was painted blue from floor to ceiling as if God had swept hi
+
 > The sky was painted blue from floor to ceiling as if God had swept his brush in a heavenly arc. The clouds were right there — as if a quick leap could propel me into the puffy mist.
 
 A few miles north of Copenhagen sits Jægersborg Dyrehave, otherwise known as *Dyrehaven* ("The Deer Park"). Founded in the 17th century as a royal hunting ground by Christian V of Denmark, it's a four square mile patch of managed nature preserve for the public and titular animals to enjoy.
