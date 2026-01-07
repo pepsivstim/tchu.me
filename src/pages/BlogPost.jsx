@@ -118,9 +118,13 @@ function BlogPost() {
                                     <img
                                         {...props}
                                         src={src}
-                                        className={`${imgClass} cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]`}
+                                        className={`${imgClass} md:cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]`}
                                         loading="lazy"
-                                        onClick={() => setSelectedImage({ url: src, caption: props.alt })}
+                                        onClick={() => {
+                                            if (window.innerWidth >= 768 && window.innerHeight >= 600) {
+                                                setSelectedImage({ url: src, caption: props.alt });
+                                            }
+                                        }}
                                     />
                                     {props.alt && (
                                         <figcaption className="text-center text-ink-light text-sm italic mt-2 font-serif">

@@ -86,10 +86,14 @@ const ImageWithLoader = ({ photo, onClick }) => {
     return (
         <div
             ref={containerRef}
-            onClick={() => onClick(photo)}
+            onClick={() => {
+                if (window.innerWidth >= 768 && window.innerHeight >= 600) {
+                    onClick(photo);
+                }
+            }}
             onMouseEnter={() => { isHoveredRef.current = true; }}
             onMouseLeave={() => { isHoveredRef.current = false; }}
-            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out md:cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
             style={{
                 transform: `scale(${visuals.scale})`,
                 transition: 'transform 75ms linear'
