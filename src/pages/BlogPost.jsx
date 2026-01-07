@@ -67,7 +67,7 @@ function BlogPost() {
     return (
         <div className="flex-grow bg-paper-base text-ink-black pt-28 pb-8">
             <article className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 prose prose-lg md:prose-xl font-serif prose-h1:mb-4">
-                <Link to="/blog" className="no-underline text-ink-light hover:text-ink-black mb-8 block transition-colors">
+                <Link to="/blog" className="no-underline text-ink-light hover:text-ink-black mb-4 block transition-colors">
                     ← Back to all posts
                 </Link>
                 <div className="mb-8">
