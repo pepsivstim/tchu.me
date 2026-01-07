@@ -172,7 +172,7 @@ function Photos() {
     }, []);
 
     return (
-        <div className="flex-grow bg-paper-base text-ink-black pt-28 pb-8">
+        <div className="flex-grow bg-paper-base text-ink-black pt-20 md:pt-[88px] lg:pt-28 pb-8">
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8">
                 {Object.keys(sections).length !== 0 && (
                     <div className="space-y-16">
