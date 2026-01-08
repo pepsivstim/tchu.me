@@ -73,6 +73,8 @@ const ThemeToggle = () => {
         };
     }, []);
 
+    if (isHomePage) return null;
+
     return (
         <div
             ref={wrapperRef}
