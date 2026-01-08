@@ -65,7 +65,7 @@ function BlogPost() {
     }, [slug]);
 
     return (
-        <div className="flex-grow bg-paper-base text-ink-black pt-28 pb-8">
+        <div className="flex-grow bg-paper-base text-ink-black pt-20 md:pt-[88px] lg:pt-28 pb-8">
             <article className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 prose prose-lg md:prose-xl font-serif prose-h1:mb-4">
                 <Link to="/blog" className="no-underline text-ink-light hover:text-ink-black mb-4 block transition-colors">
                     ← Back to all posts
@@ -118,9 +118,13 @@ function BlogPost() {
                                     <img
                                         {...props}
                                         src={src}
-                                        className={`${imgClass} cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]`}
+                                        className={`${imgClass} md:cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]`}
                                         loading="lazy"
-                                        onClick={() => setSelectedImage({ url: src, caption: props.alt })}
+                                        onClick={() => {
+                                            if (window.innerWidth >= 768 && window.innerHeight >= 600) {
+                                                setSelectedImage({ url: src, caption: props.alt });
+                                            }
+                                        }}
                                     />
                                     {props.alt && (
                                         <figcaption className="text-center text-ink-light text-sm italic mt-2 font-serif">

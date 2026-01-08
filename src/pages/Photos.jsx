@@ -86,10 +86,14 @@ const ImageWithLoader = ({ photo, onClick }) => {
     return (
         <div
             ref={containerRef}
-            onClick={() => onClick(photo)}
+            onClick={() => {
+                if (window.innerWidth >= 768 && window.innerHeight >= 600) {
+                    onClick(photo);
+                }
+            }}
             onMouseEnter={() => { isHoveredRef.current = true; }}
             onMouseLeave={() => { isHoveredRef.current = false; }}
-            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
+            className="relative group overflow-hidden rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out md:cursor-zoom-in bg-paper-border/20 aspect-[3/2]"
             style={{
                 transform: `scale(${visuals.scale})`,
                 transition: 'transform 75ms linear'
@@ -172,7 +176,7 @@ function Photos() {
     }, []);
 
     return (
-        <div className="flex-grow bg-paper-base text-ink-black pt-28 pb-8">
+        <div className="flex-grow bg-paper-base text-ink-black pt-20 md:pt-[88px] lg:pt-28 pb-8">
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8">
                 {Object.keys(sections).length !== 0 && (
                     <div className="space-y-16">

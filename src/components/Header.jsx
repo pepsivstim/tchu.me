@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
@@ -7,10 +7,26 @@ function Header() {
     const [lastScrollY, setLastScrollY] = useState(0);
     const location = useLocation();
 
+    const navRef = useRef(null);
+
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
 
     const isActive = (path) => location.pathname === path || location.pathname.startsWith(`${path}/`);
+
+    // Handle outside click
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (isMenuOpen && navRef.current && !navRef.current.contains(event.target)) {
+                closeMenu();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isMenuOpen]);
 
     useEffect(() => {
         const controlNavbar = () => {
@@ -45,7 +61,7 @@ function Header() {
     // Lock body scroll removal - user requested dropdown
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 bg-paper-base transition-transform duration-300 ${isVisible || isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+        <nav ref={navRef} className={`fixed top-0 left-0 w-full z-50 bg-paper-base transition-transform duration-300 ${isVisible || isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="w-full max-w-4xl mx-auto px-6 md:px-12 lg:px-6 py-3 lg:py-6 flex justify-between items-center relative border-b border-paper-border">
                 <Link to="/" className="flex items-center gap-3 z-50 group" onClick={closeMenu}>
                     <img
