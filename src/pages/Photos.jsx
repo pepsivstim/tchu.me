@@ -34,7 +34,7 @@ const ImageWithLoader = ({ photo, onClick }) => {
         onClick(photo);
     };
 
-    const imageUrl = `${IMAGE_ROOT}${photo.name}`;
+    const imageUrl = `${IMAGE_ROOT}cdn-cgi/image/w=800,f=auto/${photo.name}`;
 
     return (
         <div
