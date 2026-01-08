@@ -6,12 +6,13 @@ const ThemeToggle = () => {
     const [mode, setMode] = useState(localStorage.getItem('theme') || 'system');
     const location = useLocation();
 
-    // Only show toggle on blog posts (e.g. /blog/some-post), not on the list (/blog) or other pages
-    const isBlogPost = location.pathname.startsWith('/blog/') && location.pathname !== '/blog';
+    // Show on all pages except home
+    const isHomePage = location.pathname === '/';
 
     // State for managing open/close behavior replacing CSS group-hover
     const [isOpen, setIsOpen] = useState(false);
     const [isReady, setIsReady] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
     const wrapperRef = useRef(null);
 
     useEffect(() => {
@@ -71,28 +72,6 @@ const ThemeToggle = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-
-    // Logic to show/hide the toggle based on scroll position
-    const [isVisible, setIsVisible] = useState(true);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY === 0) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-                setIsOpen(false); // Close menu when scrolling
-            }
-        };
-
-        // Check initial position
-        handleScroll();
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    if (!isBlogPost) return null;
 
     return (
         <div
