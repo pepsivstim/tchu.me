@@ -2,10 +2,10 @@
 title: "The Japanese Halo"
 date: "2025-12-24"
 excerpt: "a personal examination and unscientific speculation of its appeal"
-image: "/images/your-name-stairs.jpg"
+image: "your-name-stairs.jpg"
 ---
 You don't have to be chronically online to see Japan's [halo](https://en.wikipedia.org/wiki/Halo_effect) in our culture. Instagram seems to be chock full with pictures of post-grad Japan trips. Ramen and sushi have become all the rage among foodies looking for a perfect meal. You'd be hard pressed to find many Gen-Z who haven't watched the likes of Attack on Titan or Demon Slayer. The quip that simply adding the word *Japanese* to any normal picture's caption suddenly increases its perceived "aura" is real. 
-![Japanese sunset over Okinawa (this is Maryland)](/images/okinawa-sunset.png#small)
+![Japanese sunset over Okinawa (this is Maryland)](okinawa-sunset.png#small)
 
 Yes, the Western idolization of Japan is just that. Japan isn't innately special among the many diverse cultures in the world. However as a victim of the Japanese wave, I  understand why it might seem that way.
 
@@ -14,7 +14,7 @@ I became a part of the global anime craze starting in middle school. From storie
 
 A picturesque lifestyle of Japan was sold. Going to school on the train. Walking through quiet neighborhoods stopping by a vending machine or *konbini* on the way. Cycling along rice paddies in quiet rural towns. Summer love songs about watching fireworks on a river bank. The halo got to me.
 
-![Nano Banana Pro prompt: i want you to generate an idyllic anime style picture of rural japan... it should be a shot that is close to the ground of japanese style houses, with rice paddies nearby... it should be golden hour with long shadows cast by the houses and rice... a single lane road should bisect one of the rice paddies... add some vending machines on the side and some motorbikes parked near those houses... add some very distant mountains behind the farthest houses](/images/ai-japan.jpg#medium)
+![Nano Banana Pro prompt: i want you to generate an idyllic anime style picture of rural japan... it should be a shot that is close to the ground of japanese style houses, with rice paddies nearby... it should be golden hour with long shadows cast by the houses and rice... a single lane road should bisect one of the rice paddies... add some vending machines on the side and some motorbikes parked near those houses... add some very distant mountains behind the farthest houses](ai-japan.jpg#medium)
 
 Maybe if I were into British murder mysteries or Brazilian telenovelas I'd be obsessed with British royalty or felt called by the Rio beaches. It's just I and millions of other young adults happened to have been ensnared by the country that created Pikachu.
 
@@ -34,12 +34,12 @@ The following are a few aspects of the country and culture I admire.
 As someone moved by complexity, scale, and trains, the Japanese rail system is pure  eye candy. 
 
 In the Tokyo metropolitan area alone, over 40 public and private rail operators transport 40 million people daily. The speed, orderliness, punctuality, scale, and efficiency required of the system to move one of the largest cities in the world is nothing short of a logistical and engineering marvel. The *single* 30 stop Yamanote line circling central Tokyo transports roughly 3 million people a day, more than five times the entire Washington DC metro.
-![My Yamanote line model](/images/tokyo-criss-cross.png#small)
+![My Yamanote line model](tokyo-criss-cross.png#small)
 
 Shinkansen (bullet train) lines criss-cross the country. It's considered *the* cost-effective and safe way to do medium-distance travel. In its 60+ years of operation not a single death has resulted from derailments or collisions. I took it myself both of my times in Japan. I remember checking my ticket's departure time each time my train departed, unsurprised every single one left on time to the minute.
 
 In the US we have pride in our freedom to drive anywhere in our cars. In Japan, freedom is in the convenience and efficiency of being able to get anywhere *without* needing a car.
-![Tokaido Shinkansen](/images/shinkansen-station.jpg#medium)
+![Tokaido Shinkansen](shinkansen-station.jpg#medium)
 
 #### everyday politeness
 While taking the metro in Tokyo, I recall noticing a station attendant on duty right next the help desk near the fare gates. As each person scanned their IC cards to leave the station, the attendant said thank you and bowed. 
@@ -57,12 +57,12 @@ After we ordered on the ticket machine and seated, we handed our tickets to the 
 
 This might be the halo in full swing but there's a certain respect for food and its presentation. It's a combination of the sleekness of the dining spaces, the interactive ticket machines, and the atmosphere around dining and cooking. There's a general standard that any restaurant you go into will have good service and decent food.
 
-![Delightful meal at a highway rest stop in Innoshima, Hiroshima](/images/shimanami-kaido-food.png#medium)
+![Delightful meal at a highway rest stop in Innoshima, Hiroshima](shimanami-kaido-food.png#medium)
 
 #### hospitality & cleanliness
 On my solo travel through Hiroshima in January 2025, I lived in numerous accommodations, most of which were pretty hole in the wall hostels or random rural inns. They all had one thing in common: every single one was *spotless*.
 
-![My accomodation in Omishima, Imabari](/images/omishima-airbnb.png#medium)
+![My accomodation in Omishima, Imabari](omishima-airbnb.png#medium)
 Showers seemed shiny new, completely free of even a speck of mold. Common areas were neatly stocked with towels, water jugs, combs, and anything else you could need. There is a level of effort put into cleanliness and comfort I haven't spotted at the same level anywhere else I've been.
 
 As I remarked in a journal entry:

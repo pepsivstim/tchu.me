@@ -51,6 +51,26 @@ function Home() {
 
   const currentPost = posts[currentIndex];
 
+  const getImageUrl = (path) => {
+    if (!path) return null;
+    if (path.startsWith('http')) return path;
+
+    const IMAGE_ROOT = 'https://images.tchu.me/';
+    let cleanPath = path;
+
+    // Strip hash if present
+    if (path.includes('#')) {
+      cleanPath = path.split('#')[0];
+    }
+
+    // Remove leading slash
+    if (cleanPath.startsWith('/')) {
+      cleanPath = cleanPath.slice(1);
+    }
+
+    return `${IMAGE_ROOT}${cleanPath}`;
+  };
+
   return (
     <div className="flex-grow flex items-center justify-center px-6 md:px-16 lg:px-8 pt-28 pb-8 bg-paper-base text-ink-black min-h-[calc(100vh-theme(spacing.28))]">
 
@@ -74,7 +94,7 @@ function Home() {
                 <div className="flex justify-center w-full mb-6 max-w-[300px] mx-auto">
                   <Link to={`/blog/${currentPost.slug}`} className="block w-full">
                     <img
-                      src={currentPost.image}
+                      src={getImageUrl(currentPost.image)}
                       alt={currentPost.title}
                       className="w-full aspect-square object-cover rounded-md shadow-sm transition-transform duration-500 hover:scale-[1.01]"
                     />
