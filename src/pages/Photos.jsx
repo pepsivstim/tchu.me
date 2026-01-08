@@ -40,7 +40,7 @@ const ImageWithLoader = ({ photo, onClick }) => {
         <div
             ref={imgRef}
             className={`relative break-inside-avoid group cursor-pointer overflow-hidden rounded-sm bg-gray-100 ${isLoaded ? 'opacity-100' : 'opacity-0'
-                } transition-opacity duration-500`}
+                } transition-[transform,opacity,box-shadow] duration-300 ease-out hover:scale-[1.05] hover:z-10 hover:shadow-xl transform-gpu backface-hidden`}
             onClick={(e) => {
                 if (window.innerWidth >= 768 && window.innerHeight >= 600) {
                     onPhotoClick(e);
@@ -54,7 +54,7 @@ const ImageWithLoader = ({ photo, onClick }) => {
                     alt={photo.caption || photo.name}
                     loading="lazy"
                     onLoad={() => setIsLoaded(true)}
-                    className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-[1.01]"
+                    className="w-full h-auto object-cover"
                 />
             )}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
@@ -157,7 +157,7 @@ function Photos() {
                     onClick={closeLightbox}
                 >
                     <div
-                        className="relative flex flex-col items-center justify-center max-w-7xl w-full max-h-full"
+                        className="relative flex flex-col items-center justify-center max-w-[95vw] w-full max-h-full"
                     >
                         <img
                             src={`${IMAGE_ROOT}${selectedPhoto.name}`}
