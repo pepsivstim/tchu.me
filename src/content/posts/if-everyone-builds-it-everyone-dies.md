@@ -2,7 +2,7 @@
 title: "If Anyone Builds It, Everyone Dies"
 date: "2025-12-29"
 excerpt: "a look at notable points from the book"
-image: "/images/if-anyone-builds-it-everyone-dies.png"
+image: "if-anyone-builds-it-everyone-dies.png"
 ---
 After stumbling across Hank Green's [recent video](https://www.youtube.com/watch?v=5CKuiuc5cJM),  I was quickly engrossed in his hour-long discussion with Nate Soares about the **AI alignment problem**. Soares and Eliezer Yudkowsky co-authored *If Anyone Builds It, Everyone Dies*.
 
@@ -10,7 +10,7 @@ After stumbling across Hank Green's [recent video](https://www.youtube.com/watch
 
 It was a good read. I didn't find myself pushing back on many of their points as someone relatively uneducated on the issue. Although severity is up for debate, their overall concerns seem sound. Regardless, I don't believe there are many experts that say AI alignment isn't a concern.
 
-![](/images/if-anyone-builds-it-everyone-dies.png#medium)
+![](if-anyone-builds-it-everyone-dies.png#medium)
 
 ## It isn't Terminator
 My previous impression of AI alignment was an effort to prevent some Terminator-esque situation. The Terminator narrative is that artificial superintelligence ([ASI](https://en.wikipedia.org/wiki/Superintelligence)) would become so intelligent it would suddenly gain consciousness, feel hatred towards its creators, and seek to exterminate those who brought it into existence. It seemed a bit far-fetched, at least in my lifetime. 

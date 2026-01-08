@@ -92,6 +92,7 @@ function BlogPost() {
                         img: ({ node, ...props }) => {
                             let src = props.src;
                             let imgClass = "w-full h-auto rounded-md"; // default
+                            const IMAGE_ROOT = 'https://images.tchu.me/';
 
                             // Check for size hash in URL
                             if (src && src.includes('#')) {
@@ -111,6 +112,15 @@ function BlogPost() {
                                     default:
                                         break;
                                 }
+                            }
+
+                            // Prepend root if not absolute
+                            if (src && !src.startsWith('http')) {
+                                // If it starts with /, remove it so we don't have double slashes if root has one
+                                // But here root is https://images.tchu.me/ so we want src to NOT have leading slash
+                                // Actually let's just be safe.
+                                const cleanPath = src.startsWith('/') ? src.slice(1) : src;
+                                src = `${IMAGE_ROOT}${cleanPath}`;
                             }
 
                             return (
