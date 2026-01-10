@@ -68,7 +68,7 @@ function Home() {
       cleanPath = cleanPath.slice(1);
     }
 
-    return `${IMAGE_ROOT}${cleanPath}`;
+    return `${IMAGE_ROOT}cdn-cgi/image/w=500,f=auto/${cleanPath}`;
   };
 
   return (

@@ -115,24 +115,29 @@ function BlogPost() {
                             }
 
                             // Prepend root if not absolute
+                            let fullSrc = src;
                             if (src && !src.startsWith('http')) {
-                                // If it starts with /, remove it so we don't have double slashes if root has one
-                                // But here root is https://images.tchu.me/ so we want src to NOT have leading slash
-                                // Actually let's just be safe.
                                 const cleanPath = src.startsWith('/') ? src.slice(1) : src;
-                                src = `${IMAGE_ROOT}${cleanPath}`;
+                                fullSrc = `${IMAGE_ROOT}${cleanPath}`;
+                            }
+
+                            // Generate optimized URL for display (w=1200 for 4xl container)
+                            let displayedSrc = fullSrc;
+                            if (fullSrc.startsWith(IMAGE_ROOT)) {
+                                const relativePath = fullSrc.replace(IMAGE_ROOT, '');
+                                displayedSrc = `${IMAGE_ROOT}cdn-cgi/image/w=1200,f=auto/${relativePath}`;
                             }
 
                             return (
                                 <figure className="my-8">
                                     <img
                                         {...props}
-                                        src={src}
+                                        src={displayedSrc}
                                         className={`${imgClass} md:cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]`}
                                         loading="lazy"
                                         onClick={() => {
                                             if (window.innerWidth >= 768 && window.innerHeight >= 600) {
-                                                setSelectedImage({ url: src, caption: props.alt });
+                                                setSelectedImage({ url: fullSrc, caption: props.alt });
                                             }
                                         }}
                                     />
