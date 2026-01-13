@@ -3,12 +3,14 @@ import photosManifest from '../content/photos_manifest.json';
 
 const IMAGE_ROOT = 'https://images.tchu.me/';
 
-const ImageWithLoader = ({ photo, onClick }) => {
+const ImageWithLoader = ({ photo, onClick, canLoad = true }) => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isInView, setIsInView] = useState(false);
     const imgRef = useRef();
 
     useEffect(() => {
+        if (!canLoad) return;
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -27,7 +29,7 @@ const ImageWithLoader = ({ photo, onClick }) => {
                 observer.unobserve(imgRef.current);
             }
         };
-    }, []);
+    }, [canLoad]);
 
     const onPhotoClick = (e) => {
         e.stopPropagation();
@@ -71,6 +73,109 @@ const ImageWithLoader = ({ photo, onClick }) => {
 };
 
 
+const PhotoSection = ({ section, onPhotoClick }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [isOverflowing, setIsOverflowing] = useState(false);
+    const contentRef = useRef(null);
+
+    // Split for masonry
+    const leftCol = section.images
+        .map((photo, index) => ({ photo, index }))
+        .filter((item) => item.index % 2 === 0);
+    const rightCol = section.images
+        .map((photo, index) => ({ photo, index }))
+        .filter((item) => item.index % 2 !== 0);
+
+    useEffect(() => {
+        if (!contentRef.current) return;
+
+        const checkOverflow = () => {
+            if (contentRef.current) {
+                // Check if scrollHeight exceeds our max height threshold (500px)
+                setIsOverflowing(contentRef.current.scrollHeight > 500);
+            }
+        };
+
+        const observer = new ResizeObserver(checkOverflow);
+        observer.observe(contentRef.current);
+
+        // Initial check
+        checkOverflow();
+
+        return () => observer.disconnect();
+    }, [section.images]); // Re-run if images change (unlikely/static)
+
+    const shouldShowPreview = isOverflowing && !isExpanded;
+
+    return (
+        <div className="space-y-6">
+            <div className="border-b border-paper-border pb-4">
+                <h2 className="text-3xl font-serif font-bold text-ink-black tracking-tight">{section.section}</h2>
+                {section.description && (
+                    <p className="text-ink-light text-lg mt-1 font-light italic">{section.description}</p>
+                )}
+            </div>
+
+            <div
+                ref={contentRef}
+                className={`relative ${shouldShowPreview ? 'max-h-[500px] overflow-hidden' : ''}`}
+            >
+                {/* Mobile View (Single Column) */}
+                <div className="flex flex-col gap-4 md:hidden">
+                    {section.images.map((photo, index) => (
+                        <ImageWithLoader
+                            key={photo.name}
+                            photo={photo}
+                            onClick={() => onPhotoClick(photo)}
+                            canLoad={isExpanded || index < 6}
+                        />
+                    ))}
+                </div>
+
+                {/* Desktop View (2-Column Masonry) */}
+                <div className="hidden md:flex flex-row gap-8 items-start">
+                    <div className="flex flex-col gap-8 w-1/2">
+                        {leftCol.map(({ photo, index }) => (
+                            <ImageWithLoader
+                                key={photo.name}
+                                photo={photo}
+                                onClick={() => onPhotoClick(photo)}
+                                canLoad={isExpanded || index < 6}
+                            />
+                        ))}
+                    </div>
+                    <div className="flex flex-col gap-8 w-1/2">
+                        {rightCol.map(({ photo, index }) => (
+                            <ImageWithLoader
+                                key={photo.name}
+                                photo={photo}
+                                onClick={() => onPhotoClick(photo)}
+                                canLoad={isExpanded || index < 6}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* Gradient Overlay & Expand Button - Only show if overflowing and collapsed */}
+                {shouldShowPreview && (
+                    <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-paper-base to-transparent flex items-end justify-center pb-0 z-10">
+                        <button
+                            onClick={() => setIsExpanded(true)}
+                            className="group flex flex-col items-center gap-2 p-4 hover:opacity-80 transition-opacity focus:outline-none"
+                            aria-label="Expand section"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-ink-black animate-bounce">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
+
+
 function Photos() {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 
@@ -103,86 +208,17 @@ function Photos() {
         setSelectedPhoto(null);
     };
 
-    const [expandedSections, setExpandedSections] = useState({});
-
-    const toggleSection = (sectionName) => {
-        setExpandedSections(prev => ({
-            ...prev,
-            [sectionName]: !prev[sectionName]
-        }));
-    };
-
     return (
         <div className="min-h-screen bg-paper-base pt-20 md:pt-[88px] lg:pt-28 pb-12">
 
             <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 space-y-16">
-                {photosManifest.map((section) => {
-                    // Split for masonry
-                    const leftCol = section.images.filter((_, i) => i % 2 === 0);
-                    const rightCol = section.images.filter((_, i) => i % 2 !== 0);
-                    const isExpanded = !!expandedSections[section.section];
-
-                    return (
-                        <div key={section.section} className="space-y-6">
-                            <div className="border-b border-paper-border pb-4">
-                                <h2 className="text-3xl font-serif font-bold text-ink-black tracking-tight">{section.section}</h2>
-                                {section.description && (
-                                    <p className="text-ink-light text-lg mt-1 font-light italic">{section.description}</p>
-                                )}
-                            </div>
-
-                            <div className={`relative ${!isExpanded ? 'max-h-[600px] overflow-hidden' : ''}`}>
-                                {/* Mobile View (Single Column) */}
-                                <div className="flex flex-col gap-4 md:hidden">
-                                    {section.images.map((photo) => (
-                                        <ImageWithLoader
-                                            key={photo.name}
-                                            photo={photo}
-                                            onClick={() => handlePhotoClick(photo)}
-                                        />
-                                    ))}
-                                </div>
-
-                                {/* Desktop View (2-Column Masonry) */}
-                                <div className="hidden md:flex flex-row gap-8 items-start">
-                                    <div className="flex flex-col gap-8 w-1/2">
-                                        {leftCol.map((photo) => (
-                                            <ImageWithLoader
-                                                key={photo.name}
-                                                photo={photo}
-                                                onClick={() => handlePhotoClick(photo)}
-                                            />
-                                        ))}
-                                    </div>
-                                    <div className="flex flex-col gap-8 w-1/2">
-                                        {rightCol.map((photo) => (
-                                            <ImageWithLoader
-                                                key={photo.name}
-                                                photo={photo}
-                                                onClick={() => handlePhotoClick(photo)}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Gradient Overlay & Expand Button */}
-                                {!isExpanded && (
-                                    <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-paper-base to-transparent flex items-end justify-center pb-0 z-10">
-                                        <button
-                                            onClick={() => toggleSection(section.section)}
-                                            className="group flex flex-col items-center gap-2 p-4 hover:opacity-80 transition-opacity focus:outline-none"
-                                            aria-label="Expand section"
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-ink-black animate-bounce">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    );
-                })}
+                {photosManifest.map((section) => (
+                    <PhotoSection
+                        key={section.section}
+                        section={section}
+                        onPhotoClick={handlePhotoClick}
+                    />
+                ))}
             </div>
 
             {/* Lightbox */}
