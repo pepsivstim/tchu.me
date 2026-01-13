@@ -127,7 +127,7 @@ const PhotoSection = ({ section, onPhotoClick }) => {
                             key={photo.name}
                             photo={photo}
                             onClick={() => onPhotoClick(photo)}
-                            canLoad={isExpanded || index < 6}
+                            canLoad={isExpanded || index < 3}
                         />
                     ))}
                 </div>
@@ -164,7 +164,7 @@ const PhotoSection = ({ section, onPhotoClick }) => {
                             className="group flex flex-col items-center gap-2 p-4 hover:opacity-80 transition-opacity focus:outline-none"
                             aria-label="Expand section"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-ink-black animate-bounce">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-ink-black animate-bounce">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                             </svg>
                         </button>
