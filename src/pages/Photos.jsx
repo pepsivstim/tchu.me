@@ -103,6 +103,15 @@ function Photos() {
         setSelectedPhoto(null);
     };
 
+    const [expandedSections, setExpandedSections] = useState({});
+
+    const toggleSection = (sectionName) => {
+        setExpandedSections(prev => ({
+            ...prev,
+            [sectionName]: !prev[sectionName]
+        }));
+    };
+
     return (
         <div className="min-h-screen bg-paper-base pt-20 md:pt-[88px] lg:pt-28 pb-12">
 
@@ -111,6 +120,7 @@ function Photos() {
                     // Split for masonry
                     const leftCol = section.images.filter((_, i) => i % 2 === 0);
                     const rightCol = section.images.filter((_, i) => i % 2 !== 0);
+                    const isExpanded = !!expandedSections[section.section];
 
                     return (
                         <div key={section.section} className="space-y-6">
@@ -121,37 +131,54 @@ function Photos() {
                                 )}
                             </div>
 
-                            {/* Mobile View (Single Column) */}
-                            <div className="flex flex-col gap-4 md:hidden">
-                                {section.images.map((photo) => (
-                                    <ImageWithLoader
-                                        key={photo.name}
-                                        photo={photo}
-                                        onClick={() => handlePhotoClick(photo)}
-                                    />
-                                ))}
-                            </div>
+                            <div className={`relative ${!isExpanded ? 'max-h-[600px] overflow-hidden' : ''}`}>
+                                {/* Mobile View (Single Column) */}
+                                <div className="flex flex-col gap-4 md:hidden">
+                                    {section.images.map((photo) => (
+                                        <ImageWithLoader
+                                            key={photo.name}
+                                            photo={photo}
+                                            onClick={() => handlePhotoClick(photo)}
+                                        />
+                                    ))}
+                                </div>
 
-                            {/* Desktop View (2-Column Masonry) */}
-                            <div className="hidden md:flex flex-row gap-8 items-start">
-                                <div className="flex flex-col gap-8 w-1/2">
-                                    {leftCol.map((photo) => (
-                                        <ImageWithLoader
-                                            key={photo.name}
-                                            photo={photo}
-                                            onClick={() => handlePhotoClick(photo)}
-                                        />
-                                    ))}
+                                {/* Desktop View (2-Column Masonry) */}
+                                <div className="hidden md:flex flex-row gap-8 items-start">
+                                    <div className="flex flex-col gap-8 w-1/2">
+                                        {leftCol.map((photo) => (
+                                            <ImageWithLoader
+                                                key={photo.name}
+                                                photo={photo}
+                                                onClick={() => handlePhotoClick(photo)}
+                                            />
+                                        ))}
+                                    </div>
+                                    <div className="flex flex-col gap-8 w-1/2">
+                                        {rightCol.map((photo) => (
+                                            <ImageWithLoader
+                                                key={photo.name}
+                                                photo={photo}
+                                                onClick={() => handlePhotoClick(photo)}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
-                                <div className="flex flex-col gap-8 w-1/2">
-                                    {rightCol.map((photo) => (
-                                        <ImageWithLoader
-                                            key={photo.name}
-                                            photo={photo}
-                                            onClick={() => handlePhotoClick(photo)}
-                                        />
-                                    ))}
-                                </div>
+
+                                {/* Gradient Overlay & Expand Button */}
+                                {!isExpanded && (
+                                    <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-paper-base to-transparent flex items-end justify-center pb-0 z-10">
+                                        <button
+                                            onClick={() => toggleSection(section.section)}
+                                            className="group flex flex-col items-center gap-2 p-4 hover:opacity-80 transition-opacity focus:outline-none"
+                                            aria-label="Expand section"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-ink-black animate-bounce">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     );
