@@ -43,7 +43,7 @@ But those cold winter months were entirely worth the sunny, warm weather that fo
 ![I didn't know deer could come in so many colors](dyrehaven-deer.png#medium)
 
 ## shelter in a storm of light
-Close to midnight on May 10th 2024, my friend across the sea in Lund, Sweden texted me there was a decent chance of seeing aurora that night. I dismissed this as unlikely, especially in not-north-enough Denmark. A few hours later when he told me to check for real, things started looking up.
+On the evening of May 10th 2024, my friend across the sea in Lund, Sweden texted me there was a decent chance of seeing aurora that night. I dismissed this as unlikely, especially in not-north-enough Denmark. A few hours later when he told me to check for real, things started looking up.
 
 > holy shit ive never seen [noaa](https://www.spaceweather.gov/communities/aurora-dashboard-experimental) go red
 

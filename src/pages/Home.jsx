@@ -71,6 +71,19 @@ function Home() {
     return `${IMAGE_ROOT}cdn-cgi/image/w=500,f=auto/${cleanPath}`;
   };
 
+  // Preload next image
+  useEffect(() => {
+    if (posts.length === 0) return;
+
+    const nextIndex = (currentIndex + 1) % posts.length;
+    const nextPost = posts[nextIndex];
+
+    if (nextPost && nextPost.image) {
+      const img = new Image();
+      img.src = getImageUrl(nextPost.image);
+    }
+  }, [currentIndex, posts]);
+
   return (
     <div className="flex-grow flex items-center justify-center px-6 md:px-16 lg:px-8 pt-28 pb-8 bg-paper-base text-ink-black min-h-[calc(100vh-theme(spacing.28))]">
 

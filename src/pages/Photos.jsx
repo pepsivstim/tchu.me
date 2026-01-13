@@ -60,8 +60,8 @@ const ImageWithLoader = ({ photo, onClick }) => {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
 
             {photo.caption && (
-                <div className="absolute bottom-0 left-0 w-full p-3 bg-paper-base/95 backdrop-blur-sm border-t border-paper-border transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
-                    <p className="text-ink-black font-serif italic text-lg text-center leading-tight">
+                <div className="absolute bottom-0 left-0 w-full p-3 bg-black/80 backdrop-blur-sm border-t border-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20">
+                    <p className="text-white font-serif text-lg text-center leading-tight">
                         {photo.caption}
                     </p>
                 </div>
