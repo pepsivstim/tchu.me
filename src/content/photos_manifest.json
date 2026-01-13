@@ -8,27 +8,19 @@
                 "caption": "Skútafoss"
             },
             {
-                "name": "iceland-film-post-glacier-walk.jpg",
-                "caption": "Vatnajökull"
-            },
-            {
-                "name": "iceland-film-yaris-back.jpg",
-                "caption": "Posing on Gauter's driveway"
-            },
-            {
-                "name": "iceland-film-run-away.jpg",
-                "caption": ""
+                "name": "iceland-film-golden-hour.jpg",
+                "caption": "GOLDEN HOUR"
             },
             {
                 "name": "iceland-film-car-sunset.jpg",
                 "caption": ""
             },
             {
-                "name": "iceland-film-cave-selfie.jpg",
-                "caption": ""
+                "name": "iceland-film-yaris-back.jpg",
+                "caption": "Posing on Gauter's driveway"
             },
             {
-                "name": "iceland-film-waterfall-snow.jpg",
+                "name": "iceland-film-geyser.jpg",
                 "caption": ""
             },
             {
@@ -36,26 +28,18 @@
                 "caption": ""
             },
             {
-                "name": "iceland-film-max-yaris.jpg",
-                "caption": ""
-            },
-            {
-                "name": "iceland-film-geyser.jpg",
-                "caption": ""
+                "name": "iceland-film-post-glacier-walk.jpg",
+                "caption": "Vatnajökull"
             },
             {
                 "name": "iceland-film-duo.jpg",
                 "caption": ""
-            },
-            {
-                "name": "iceland-film-golden-hour.jpg",
-                "caption": "GOLDEN HOUR"
             }
         ]
     },
     {
         "section": "denmark",
-        "description": "6 months of adventure",
+        "description": "",
         "images": [
             {
                 "name": "nyhavn.jpg",
@@ -63,10 +47,88 @@
             },
             {
                 "name": "thy-beach.jpg",
+                "caption": "Ejstrup beach"
+            },
+            {
+                "name": "dannebrog-museet.jpg",
+                "caption": "Dannebrog: Oldest continuously used flag in the world"
+            },
+            {
+                "name": "denmark-light-aurora.jpg",
                 "caption": ""
             },
             {
+                "name": "denmark-windows.jpg",
+                "caption": "Windows background"
+            },
+            {
                 "name": "taabaek-clouds.jpg",
+                "caption": "Cumulonimbus over the Øresund"
+            },
+            {
+                "name": "frederiks-church.jpg",
+                "caption": ""
+            },
+            {
+                "name": "denmark-bike-tim-sign.jpg",
+                "caption": "I'm 7K away"
+            },
+            {
+                "name": "denmark-bike-path.jpg",
+                "caption": ""
+            },
+            {
+                "name": "denmark-bike-beach.jpg",
+                "caption": ""
+            },
+            {
+                "name": "denmark-map.jpg",
+                "caption": ""
+            },
+            {
+                "name": "denmark-bike-hand.jpg",
+                "caption": ""
+            }
+        ]
+    },
+    {
+        "section": "mt. baker + mt. rainier",
+        "description": "",
+        "images": [
+            {
+                "name": "mt-rainier.jpg",
+                "caption": "Jewel of Washington"
+            },
+            {
+                "name": "rainier-aura.JPG",
+                "caption": "Brandon aura farming"
+            },
+            {
+                "name": "rainier-ridgeline.jpg",
+                "caption": ""
+            },
+            {
+                "name": "rainier-night.jpg",
+                "caption": ""
+            },
+            {
+                "name": "mt-baker.jpg",
+                "caption": ""
+            },
+            {
+                "name": "baker-milkyway.jpg",
+                "caption": ""
+            },
+            {
+                "name": "baker-glacier-walk.jpg",
+                "caption": ""
+            },
+            {
+                "name": "rainier-sunset-pose.jpg",
+                "caption": ""
+            },
+            {
+                "name": "rainier-stars.jpg",
                 "caption": ""
             }
         ]
@@ -80,15 +142,33 @@
                 "caption": ""
             },
             {
-                "name": "kirosan-summit.jpg",
+                "name": "imabari-bridge.jpg",
                 "caption": "Kirosan"
             },
             {
-                "name": "imabari-bridge.jpg",
+                "name": "shimanami-fisherman.jpg",
                 "caption": ""
             },
             {
-                "name": "shimanami-fisherman.jpg",
+                "name": "hiroshima-dome.jpg",
+                "caption": ""
+            },
+            {
+                "name": "japan-vending-machines.jpg",
+                "caption": ""
+            },
+            {
+                "name": "hokkaido-candles.jpg",
+                "caption": ""
+            }
+        ]
+    },
+    {
+        "section": "taiwan",
+        "description": "",
+        "images": [
+            {
+                "name": "taiwan-yuan-shan-hotel.jpg",
                 "caption": ""
             }
         ]
@@ -103,6 +183,40 @@
             },
             {
                 "name": "madurai-temple.jpg",
+                "caption": ""
+            },
+            {
+                "name": "india-temple-monkey.jpg",
+                "caption": ""
+            },
+            {
+                "name": "india-street.jpg",
+                "caption": ""
+            },
+            {
+                "name": "coimbatore-silks.jpg",
+                "caption": ""
+            }
+        ]
+    },
+    {
+        "section": "☁️",
+        "description": "",
+        "images": [
+            {
+                "name": "gitlab-cloud.jpg",
+                "caption": ""
+            },
+            {
+                "name": "denmark-cloud.JPG",
+                "caption": ""
+            },
+            {
+                "name": "mont-blanc-glider.jpg",
+                "caption": ""
+            },
+            {
+                "name": "cloud-sunset-glow.jpg",
                 "caption": ""
             }
         ]
