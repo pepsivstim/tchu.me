@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 import photosManifest from '../content/photos_manifest.json';
+import { slugify } from '../utils/slugify';
+import NotFound from './NotFound';
 
 const IMAGE_ROOT = 'https://images.tchu.me/';
 
@@ -73,7 +76,7 @@ const ImageWithLoader = ({ photo, onClick, canLoad = true }) => {
 };
 
 
-const PhotoSection = ({ section, onPhotoClick }) => {
+const PhotoSection = ({ section, onPhotoClick, isSingleSection = false }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isOverflowing, setIsOverflowing] = useState(false);
     const contentRef = useRef(null);
@@ -105,7 +108,7 @@ const PhotoSection = ({ section, onPhotoClick }) => {
         return () => observer.disconnect();
     }, [section.images]); // Re-run if images change (unlikely/static)
 
-    const shouldShowPreview = isOverflowing && !isExpanded;
+    const shouldShowPreview = isOverflowing && !isExpanded && !isSingleSection;
 
     return (
         <div className="space-y-6">
@@ -127,7 +130,7 @@ const PhotoSection = ({ section, onPhotoClick }) => {
                             key={photo.name}
                             photo={photo}
                             onClick={() => onPhotoClick(photo)}
-                            canLoad={isExpanded || index < 3}
+                            canLoad={isExpanded || isSingleSection || index < 3}
                         />
                     ))}
                 </div>
@@ -140,7 +143,7 @@ const PhotoSection = ({ section, onPhotoClick }) => {
                                 key={photo.name}
                                 photo={photo}
                                 onClick={() => onPhotoClick(photo)}
-                                canLoad={isExpanded || index < 6}
+                                canLoad={isExpanded || isSingleSection || index < 6}
                             />
                         ))}
                     </div>
@@ -150,7 +153,7 @@ const PhotoSection = ({ section, onPhotoClick }) => {
                                 key={photo.name}
                                 photo={photo}
                                 onClick={() => onPhotoClick(photo)}
-                                canLoad={isExpanded || index < 6}
+                                canLoad={isExpanded || isSingleSection || index < 6}
                             />
                         ))}
                     </div>
@@ -176,12 +179,23 @@ const PhotoSection = ({ section, onPhotoClick }) => {
 };
 
 
+
 function Photos() {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
+    const { location } = useParams();
+
+    // Filter sections based on url param
+    const displayedSections = location
+        ? photosManifest.filter(section => slugify(section.section) === location)
+        : photosManifest;
 
     useEffect(() => {
-        document.title = 'Photos | tchu.me';
-    }, []);
+        if (location && displayedSections.length > 0) {
+            document.title = `${displayedSections[0].section} | Photos | tchu.me`;
+        } else {
+            document.title = 'Photos | tchu.me';
+        }
+    }, [location, displayedSections]);
 
     // Handle body scroll locking when lightbox is open
     useEffect(() => {
@@ -209,17 +223,22 @@ function Photos() {
     };
 
     return (
-        <div className="min-h-screen bg-paper-base pt-20 md:pt-[88px] lg:pt-28 pb-12">
+        <div className="flex-grow flex flex-col bg-paper-base pt-20 md:pt-[88px] lg:pt-28 pb-12">
 
-            <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 space-y-16">
-                {photosManifest.map((section) => (
-                    <PhotoSection
-                        key={section.section}
-                        section={section}
-                        onPhotoClick={handlePhotoClick}
-                    />
-                ))}
-            </div>
+            {displayedSections.length > 0 ? (
+                <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 space-y-16">
+                    {displayedSections.map((section) => (
+                        <PhotoSection
+                            key={section.section}
+                            section={section}
+                            onPhotoClick={handlePhotoClick}
+                            isSingleSection={!!location}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <NotFound />
+            )}
 
             {/* Lightbox */}
             {selectedPhoto && (

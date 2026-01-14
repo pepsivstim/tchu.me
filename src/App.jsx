@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Photos from './pages/Photos';
+import NotFound from './pages/NotFound';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
@@ -19,6 +20,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/photos" element={<Photos />} />
+            <Route path="/photos/:location" element={<Photos />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
