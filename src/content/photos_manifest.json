@@ -50,12 +50,12 @@
                 "caption": "Ejstrup beach"
             },
             {
-                "name": "dannebrog-museet.jpg",
-                "caption": "Dannebrog: Oldest continuously used flag in the world"
-            },
-            {
                 "name": "denmark-light-aurora.jpg",
                 "caption": ""
+            },
+            {
+                "name": "dannebrog-museet.jpg",
+                "caption": "Dannebrog: Oldest continuously used flag in the world"
             },
             {
                 "name": "denmark-windows.jpg",
@@ -82,12 +82,24 @@
                 "caption": ""
             },
             {
+                "name": "nyhvan-other-side.jpg",
+                "caption": "Other side of Nyhavn"
+            },
+            {
                 "name": "denmark-map.jpg",
                 "caption": ""
             },
             {
                 "name": "denmark-bike-hand.jpg",
                 "caption": ""
+            },
+            {
+                "name": "copenhagen-windmill.jpg",
+                "caption": "Windmills are so majestic"
+            },
+            {
+                "name": "lild-strand-bike.jpg",
+                "caption": "Lild Strand"
             }
         ]
     },
@@ -170,6 +182,10 @@
             {
                 "name": "taiwan-yuan-shan-hotel.jpg",
                 "caption": ""
+            },
+            {
+                "name": "jiufen-cloudy.jpg",
+                "caption": ""
             }
         ]
     },
@@ -195,6 +211,10 @@
             },
             {
                 "name": "coimbatore-silks.jpg",
+                "caption": ""
+            },
+            {
+                "name": "megamalai-tea.jpg",
                 "caption": ""
             }
         ]

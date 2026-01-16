@@ -44,7 +44,7 @@ const ImageWithLoader = ({ photo, onClick, canLoad = true }) => {
     return (
         <div
             ref={imgRef}
-            className={`relative break-inside-avoid group cursor-pointer overflow-hidden rounded-sm bg-gray-100 ${isLoaded ? 'opacity-100' : 'opacity-0'
+            className={`relative break-inside-avoid mb-4 md:mb-8 w-full group cursor-pointer overflow-hidden rounded-sm bg-gray-100 ${isLoaded ? 'opacity-100' : 'opacity-0'
                 } transition-[transform,opacity,box-shadow] duration-300 ease-out hover:scale-[1.05] hover:z-10 hover:shadow-xl transform-gpu backface-hidden`}
             onClick={(e) => {
                 if (window.innerWidth >= 768 && window.innerHeight >= 600) {
@@ -81,14 +81,6 @@ const PhotoSection = ({ section, onPhotoClick, isSingleSection = false }) => {
     const [isOverflowing, setIsOverflowing] = useState(false);
     const contentRef = useRef(null);
 
-    // Split for masonry
-    const leftCol = section.images
-        .map((photo, index) => ({ photo, index }))
-        .filter((item) => item.index % 2 === 0);
-    const rightCol = section.images
-        .map((photo, index) => ({ photo, index }))
-        .filter((item) => item.index % 2 !== 0);
-
     useEffect(() => {
         if (!contentRef.current) return;
 
@@ -123,40 +115,16 @@ const PhotoSection = ({ section, onPhotoClick, isSingleSection = false }) => {
                 ref={contentRef}
                 className={`relative ${shouldShowPreview ? 'max-h-[500px] overflow-hidden' : ''}`}
             >
-                {/* Mobile View (Single Column) */}
-                <div className="flex flex-col gap-4 md:hidden">
+                {/* Unified CSS Columns View */}
+                <div className="columns-1 md:columns-2 gap-4 md:gap-8">
                     {section.images.map((photo, index) => (
                         <ImageWithLoader
                             key={photo.name}
                             photo={photo}
                             onClick={() => onPhotoClick(photo)}
-                            canLoad={isExpanded || isSingleSection || index < 3}
+                            canLoad={isExpanded || isSingleSection || index < 6}
                         />
                     ))}
-                </div>
-
-                {/* Desktop View (2-Column Masonry) */}
-                <div className="hidden md:flex flex-row gap-8 items-start">
-                    <div className="flex flex-col gap-8 w-1/2">
-                        {leftCol.map(({ photo, index }) => (
-                            <ImageWithLoader
-                                key={photo.name}
-                                photo={photo}
-                                onClick={() => onPhotoClick(photo)}
-                                canLoad={isExpanded || isSingleSection || index < 6}
-                            />
-                        ))}
-                    </div>
-                    <div className="flex flex-col gap-8 w-1/2">
-                        {rightCol.map(({ photo, index }) => (
-                            <ImageWithLoader
-                                key={photo.name}
-                                photo={photo}
-                                onClick={() => onPhotoClick(photo)}
-                                canLoad={isExpanded || isSingleSection || index < 6}
-                            />
-                        ))}
-                    </div>
                 </div>
 
                 {/* Gradient Overlay & Expand Button - Only show if overflowing and collapsed */}
