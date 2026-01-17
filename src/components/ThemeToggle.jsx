@@ -78,7 +78,7 @@ const ThemeToggle = () => {
     return (
         <div
             ref={wrapperRef}
-            className={`fixed right-0 top-[50svh] -translate-y-1/2 z-50 transition-transform duration-300 ease-in-out ${isVisible ? 'translate-x-0' : 'translate-x-12' /* Slide out to the right */
+            className={`fixed right-0 top-[50dvh] -translate-y-1/2 z-50 transition-all duration-300 ease-in-out ${isVisible ? 'translate-x-0' : 'translate-x-12' /* Slide out to the right */
                 }`}
             onPointerEnter={(e) => { if (e.pointerType === 'mouse') setIsOpen(true); }}
             onPointerLeave={(e) => { if (e.pointerType === 'mouse') setIsOpen(false); }}
