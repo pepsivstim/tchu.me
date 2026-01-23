@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 import photosManifest from '../content/photos_manifest.json';
+import { slugify } from '../utils/slugify';
+import NotFound from './NotFound';
 
 const IMAGE_ROOT = 'https://images.tchu.me/';
 
@@ -41,7 +44,7 @@ const ImageWithLoader = ({ photo, onClick, canLoad = true }) => {
     return (
         <div
             ref={imgRef}
-            className={`relative break-inside-avoid group cursor-pointer overflow-hidden rounded-sm bg-gray-100 ${isLoaded ? 'opacity-100' : 'opacity-0'
+            className={`relative break-inside-avoid mb-4 md:mb-8 w-full group cursor-pointer overflow-hidden rounded-sm bg-gray-100 ${isLoaded ? 'opacity-100' : 'opacity-0'
                 } transition-[transform,opacity,box-shadow] duration-300 ease-out hover:scale-[1.05] hover:z-10 hover:shadow-xl transform-gpu backface-hidden`}
             onClick={(e) => {
                 if (window.innerWidth >= 768 && window.innerHeight >= 600) {
@@ -73,18 +76,10 @@ const ImageWithLoader = ({ photo, onClick, canLoad = true }) => {
 };
 
 
-const PhotoSection = ({ section, onPhotoClick }) => {
+const PhotoSection = ({ section, onPhotoClick, isSingleSection = false }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isOverflowing, setIsOverflowing] = useState(false);
     const contentRef = useRef(null);
-
-    // Split for masonry
-    const leftCol = section.images
-        .map((photo, index) => ({ photo, index }))
-        .filter((item) => item.index % 2 === 0);
-    const rightCol = section.images
-        .map((photo, index) => ({ photo, index }))
-        .filter((item) => item.index % 2 !== 0);
 
     useEffect(() => {
         if (!contentRef.current) return;
@@ -105,7 +100,7 @@ const PhotoSection = ({ section, onPhotoClick }) => {
         return () => observer.disconnect();
     }, [section.images]); // Re-run if images change (unlikely/static)
 
-    const shouldShowPreview = isOverflowing && !isExpanded;
+    const shouldShowPreview = isOverflowing && !isExpanded && !isSingleSection;
 
     return (
         <div className="space-y-6">
@@ -120,40 +115,16 @@ const PhotoSection = ({ section, onPhotoClick }) => {
                 ref={contentRef}
                 className={`relative ${shouldShowPreview ? 'max-h-[500px] overflow-hidden' : ''}`}
             >
-                {/* Mobile View (Single Column) */}
-                <div className="flex flex-col gap-4 md:hidden">
+                {/* Unified CSS Columns View */}
+                <div className="columns-1 md:columns-2 gap-4 md:gap-8">
                     {section.images.map((photo, index) => (
                         <ImageWithLoader
                             key={photo.name}
                             photo={photo}
                             onClick={() => onPhotoClick(photo)}
-                            canLoad={isExpanded || index < 3}
+                            canLoad={isExpanded || isSingleSection || index < 6}
                         />
                     ))}
-                </div>
-
-                {/* Desktop View (2-Column Masonry) */}
-                <div className="hidden md:flex flex-row gap-8 items-start">
-                    <div className="flex flex-col gap-8 w-1/2">
-                        {leftCol.map(({ photo, index }) => (
-                            <ImageWithLoader
-                                key={photo.name}
-                                photo={photo}
-                                onClick={() => onPhotoClick(photo)}
-                                canLoad={isExpanded || index < 6}
-                            />
-                        ))}
-                    </div>
-                    <div className="flex flex-col gap-8 w-1/2">
-                        {rightCol.map(({ photo, index }) => (
-                            <ImageWithLoader
-                                key={photo.name}
-                                photo={photo}
-                                onClick={() => onPhotoClick(photo)}
-                                canLoad={isExpanded || index < 6}
-                            />
-                        ))}
-                    </div>
                 </div>
 
                 {/* Gradient Overlay & Expand Button - Only show if overflowing and collapsed */}
@@ -176,12 +147,23 @@ const PhotoSection = ({ section, onPhotoClick }) => {
 };
 
 
+
 function Photos() {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
+    const { location } = useParams();
+
+    // Filter sections based on url param
+    const displayedSections = location
+        ? photosManifest.filter(section => slugify(section.section) === location)
+        : photosManifest;
 
     useEffect(() => {
-        document.title = 'Photos | tchu.me';
-    }, []);
+        if (location && displayedSections.length > 0) {
+            document.title = `${displayedSections[0].section} | Photos | tchu.me`;
+        } else {
+            document.title = 'Photos | tchu.me';
+        }
+    }, [location, displayedSections]);
 
     // Handle body scroll locking when lightbox is open
     useEffect(() => {
@@ -209,17 +191,22 @@ function Photos() {
     };
 
     return (
-        <div className="min-h-screen bg-paper-base pt-20 md:pt-[88px] lg:pt-28 pb-12">
+        <div className="flex-grow flex flex-col bg-paper-base pt-20 md:pt-[88px] lg:pt-28 pb-12">
 
-            <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 space-y-16">
-                {photosManifest.map((section) => (
-                    <PhotoSection
-                        key={section.section}
-                        section={section}
-                        onPhotoClick={handlePhotoClick}
-                    />
-                ))}
-            </div>
+            {displayedSections.length > 0 ? (
+                <div className="w-full max-w-4xl mx-auto px-6 md:px-16 lg:px-8 space-y-16">
+                    {displayedSections.map((section) => (
+                        <PhotoSection
+                            key={section.section}
+                            section={section}
+                            onPhotoClick={handlePhotoClick}
+                            isSingleSection={!!location}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <NotFound />
+            )}
 
             {/* Lightbox */}
             {selectedPhoto && (
